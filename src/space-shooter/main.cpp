@@ -26,20 +26,6 @@ int main() {
 
   auto manager = space_shooter::ecs::Manager(game_config);
 
-  // Vaisseau
-  std::string texte = "C:/Users/polo7/Documents/ESIEE/E4/Cours E4/Programation C++/Projet/squeleton/squeleton/assets/textures/spacecraft.png";
-  sf::Vector2f initialPosition(100.0f, 100.0f);
-  sf::Vector2f initialVelocite(0.0f, 0.0f);
-  std::filesystem::path imagePath("textures/spacecraft.png");
-  
-  auto playerShip = space_shooter::ecs::PlayerShipEntity(initialPosition, imagePath, initialVelocite);
-  manager.registerEntity<space_shooter::ecs::PlayerShipEntity>(std::move(playerShip));
-
-  // RenderSystem
-  auto renderingSystem = space_shooter::ecs::RenderingSystem();
-  manager.registerSystem<space_shooter::ecs::RenderingSystem>(std::move(renderingSystem));
-
-
   // window
   auto *window = manager.gameState().rendering_window.get();
   auto clock = sf::Clock{};

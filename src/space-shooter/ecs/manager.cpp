@@ -29,20 +29,8 @@ void Manager::update(const sf::Time &delta_time) {
     triggerSceneChange();
   }
 
-  if(systems_.empty())
-  {
-    std::cout << "vide" << std::endl;
-  }
-
-  if(entities_.empty())
-  {
-    std::cout << "enti vide" << std::endl;
-  }
-
   for (auto &system : systems_) {
-    std::cout << "testEna" << std::endl;
     if (system->isEnabled()) {
-      std::cout << "test2" << std::endl;
       auto relevant_entities = filterEntitiesForSystem(system.get());
       system->update(delta_time, relevant_entities, *this);
     }
