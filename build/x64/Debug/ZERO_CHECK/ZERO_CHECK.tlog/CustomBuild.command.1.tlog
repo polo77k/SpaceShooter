@@ -1,0 +1,10 @@
+^C:\USERS\POLO7\DOCUMENTS\ESIEE\E4\COURS E4\PROGRAMATION C++\PROJET\SQUELETON\SQUELETON\BUILD\CMAKEFILES\76F008EC66EF821121BBEB6B9CF72A82\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/polo7/Documents/ESIEE/E4/Cours E4/Programation C++/Projet/squeleton/squeleton" "-BC:/Users/polo7/Documents/ESIEE/E4/Cours E4/Programation C++/Projet/squeleton/squeleton/build" --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "C:/Users/polo7/Documents/ESIEE/E4/Cours E4/Programation C++/Projet/squeleton/squeleton/build/SpaceShooter.sln"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
