@@ -29,7 +29,6 @@ public:
         new Ent{std::forward<Args>(args)...} //
     };
     entities_.push_back(std::move(entity));
-    std::cout << "push" << std::endl;
     return static_cast<Ent &>(*entities_.back());
   }
 
@@ -39,11 +38,6 @@ public:
         new Sys{std::forward<Args>(args)...} //
     };
     systems_.push_back(std::move(system));
-    if(systems_.empty())
-    {
-      std::cout << "pas push2" << std::endl;
-    }
-    
     return static_cast<Sys &>(*systems_.back());
   }
 
