@@ -10,10 +10,11 @@ struct SpriteComponent : Component {
   int width = 0;
   int height = 0;
   Resize resize = Resize::Crop;
+  float size = 1.0f; // size by default
 
   SpriteComponent() = default;
-  SpriteComponent(int width, int height, Resize resize = Resize::Crop)
-      : width{width}, height{height}, resize{resize} {}
+  SpriteComponent(int width, int height, Resize resize = Resize::Crop, float size = 1.0f)
+      : width{width}, height{height}, resize{resize}, size{size} {}
 };
 
 } // namespace space_shooter::ecs

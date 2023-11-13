@@ -16,7 +16,7 @@ PlayerShipEntity::PlayerShipEntity(sf::Vector2f pos, const std::filesystem::path
   add<PositionComponent>(pos.x, pos.y);
   add<InputComponent>();
   add<TextureComponent>(texture_path);
-  add<SpriteComponent>(50, 20, SpriteComponent::Resize::Scale);
+  add<SpriteComponent>(800, 800, SpriteComponent::Resize::Scale, 0.12f);
   add<VelocityComponent>(velocity.x, velocity.y);
 }
 

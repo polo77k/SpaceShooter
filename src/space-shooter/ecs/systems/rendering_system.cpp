@@ -51,7 +51,7 @@ void RenderingSystem::update(const sf::Time & delta_time, std::vector<Entity *> 
     sprite.setTextureRect(sf::IntRect(0, 0, spr.width, spr.height));
     if(spr.resize == SpriteComponent::Resize::Scale)
     {
-      sprite.setScale(2.0f, 2.0f);
+      sprite.setScale(spr.size, spr.size); // adapte à la size donnée
     }
 
     manager.gameState().rendering_window->draw(sprite);

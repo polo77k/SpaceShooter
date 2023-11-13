@@ -6,7 +6,7 @@ namespace space_shooter {
 
 void initLevel(ecs::Manager &manager) {
   // Vaisseau
-  sf::Vector2f initialPosition(100.0f, 100.0f);
+  sf::Vector2f initialPosition(415.0f, 790.0f);
   sf::Vector2f initialVelocite(0.0f, 0.0f);
   auto imagePath = manager.gameState().config.path_to_textures / "spacecraft.png";
 
