@@ -52,37 +52,3 @@ int main() {
 }
 
 
-/*
-int main()
-{
-    // Create a window with the title "Hello World"
-    sf::RenderWindow window(sf::VideoMode(800, 600), "Hello World");
-
-    // Create a green circle
-    sf::CircleShape greenCircle(50); // Radius of the circle
-
-    // Set the fill color to green
-    greenCircle.setFillColor(sf::Color::Green);
-
-    // Main loop
-    while (window.isOpen())
-    {
-        sf::Event event;
-        while (window.pollEvent(event))
-        {
-            if (event.type == sf::Event::Closed)
-                window.close();
-        }
-
-        // Clear the window
-        window.clear();
-
-        // Draw the green circle
-        window.draw(greenCircle);
-
-        // Display the frame
-        window.display();
-    }
-
-    return 0;
-}*/

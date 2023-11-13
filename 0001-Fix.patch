@@ -1,0 +1,101 @@
+From c05ee55d91915a594d0bf04b4ccf0367b3a1281c Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Micha=C3=ABl=20Roynard?= <michael.roynard@esiee.fr>
+Date: Wed, 1 Nov 2023 22:25:38 +0100
+Subject: [PATCH] Fix
+
+---
+ src/space-shooter/ecs/manager.cpp  | 12 ------------
+ src/space-shooter/game_state.cpp   |  1 +
+ src/space-shooter/main.cpp         | 14 --------------
+ src/space-shooter/scenes/level.cpp | 13 ++++++++++++-
+ 4 files changed, 13 insertions(+), 27 deletions(-)
+
+diff --git a/src/space-shooter/ecs/manager.cpp b/src/space-shooter/ecs/manager.cpp
+index e1f3845..5462428 100644
+--- a/src/space-shooter/ecs/manager.cpp
++++ b/src/space-shooter/ecs/manager.cpp
+@@ -29,20 +29,8 @@ void Manager::update(const sf::Time &delta_time) {
+     triggerSceneChange();
+   }
+ 
+-  if(systems_.empty())
+-  {
+-    std::cout << "vide" << std::endl;
+-  }
+-
+-  if(entities_.empty())
+-  {
+-    std::cout << "enti vide" << std::endl;
+-  }
+-
+   for (auto &system : systems_) {
+-    std::cout << "testEna" << std::endl;
+     if (system->isEnabled()) {
+-      std::cout << "test2" << std::endl;
+       auto relevant_entities = filterEntitiesForSystem(system.get());
+       system->update(delta_time, relevant_entities, *this);
+     }
+diff --git a/src/space-shooter/game_state.cpp b/src/space-shooter/game_state.cpp
+index e29d1e3..0e41904 100644
+--- a/src/space-shooter/game_state.cpp
++++ b/src/space-shooter/game_state.cpp
+@@ -19,6 +19,7 @@ std::unique_ptr<GameState> initGameState(const GameConfig &game_config) {
+       .rendering_window = initRenderingWindow(
+           game_config.title, game_config.window_width,
+           game_config.window_height, game_config.frame_rate),
++      // First scene here is level, so first function to do is level.cpp : init_level()
+       .switch_to_scene = GameState::Scene::Level,
+       .running = true,
+       .keep_entities = false,
+diff --git a/src/space-shooter/main.cpp b/src/space-shooter/main.cpp
+index fa5da52..689785c 100644
+--- a/src/space-shooter/main.cpp
++++ b/src/space-shooter/main.cpp
+@@ -26,20 +26,6 @@ int main() {
+ 
+   auto manager = space_shooter::ecs::Manager(game_config);
+ 
+-  // Vaisseau
+-  std::string texte = "C:/Users/polo7/Documents/ESIEE/E4/Cours E4/Programation C++/Projet/squeleton/squeleton/assets/textures/spacecraft.png";
+-  sf::Vector2f initialPosition(100.0f, 100.0f);
+-  sf::Vector2f initialVelocite(0.0f, 0.0f);
+-  std::filesystem::path imagePath("textures/spacecraft.png");
+-  
+-  auto playerShip = space_shooter::ecs::PlayerShipEntity(initialPosition, imagePath, initialVelocite);
+-  manager.registerEntity<space_shooter::ecs::PlayerShipEntity>(std::move(playerShip));
+-
+-  // RenderSystem
+-  auto renderingSystem = space_shooter::ecs::RenderingSystem();
+-  manager.registerSystem<space_shooter::ecs::RenderingSystem>(std::move(renderingSystem));
+-
+-
+   // window
+   auto *window = manager.gameState().rendering_window.get();
+   auto clock = sf::Clock{};
+diff --git a/src/space-shooter/scenes/level.cpp b/src/space-shooter/scenes/level.cpp
+index 9226426..1f562ea 100644
+--- a/src/space-shooter/scenes/level.cpp
++++ b/src/space-shooter/scenes/level.cpp
+@@ -5,7 +5,18 @@
+ namespace space_shooter {
+ 
+ void initLevel(ecs::Manager &manager) {
++  // Vaisseau
++  sf::Vector2f initialPosition(100.0f, 100.0f);
++  sf::Vector2f initialVelocite(0.0f, 0.0f);
++  auto imagePath = manager.gameState().config.path_to_textures / "spacecraft.png";
++
++  manager.registerEntity<space_shooter::ecs::PlayerShipEntity>(initialPosition, imagePath, initialVelocite);
++
++  // RenderSystem
++  manager.registerSystem<space_shooter::ecs::RenderingSystem>();
++
++  // Register entities/systems here
+   // TODO
+-  manager.gameState().switch_to_scene = GameState::Scene::Score;
++  //manager.gameState().switch_to_scene = GameState::Scene::Score;
+ }
+ } // namespace space_shooter
+-- 
+2.25.1
+
