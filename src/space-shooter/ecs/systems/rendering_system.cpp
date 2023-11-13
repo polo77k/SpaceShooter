@@ -18,8 +18,6 @@ RenderingSystem::RenderingSystem()
 
 void RenderingSystem::update(const sf::Time & delta_time, std::vector<Entity *> &entities, Manager &manager)
 {
-  std::cout << "test3" << std::endl;
-
   for (auto e : entities) {
     assert(hasRequiredComponents(*e));
 
@@ -46,7 +44,6 @@ void RenderingSystem::update(const sf::Time & delta_time, std::vector<Entity *> 
         std::cerr << "Probleme texture : " << tex.texture_path.string() << std::endl;
       }
     }
-    std::cout << "test" << std::endl;
     
     sf::Sprite sprite;
     sprite.setTexture(tex.texture);
