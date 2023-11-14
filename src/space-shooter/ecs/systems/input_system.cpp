@@ -21,11 +21,29 @@ void InputSystem::update(const sf::Time &delta_time,
   for (auto e : entities) {
     assert(hasRequiredComponents(*e));
 
-    // auto &input = e->get<InputComponent>();
+    auto &input = e->get<InputComponent>();
 
-    // TODO : reset detected input from keyboard (put all value of component to
-    // false)
+    // TODO : reset detected input from keyboard (put all value of component to false)
+    input.move_left = false; input.move_right = false; input.move_top = false; input.move_bottom = false;
+    input.shooting = false; input.escape = false; input.enter = false;
+    
     // TODO: detect keypressed with SFML and set the boolean state accordingly
+    if(sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
+    {
+      input.move_left = true;
+    }
+    if(sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
+    {
+      input.move_right = true;
+    }
+    if(sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
+    {
+      input.move_top = true;
+    }
+    if(sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
+    {
+      input.move_bottom = true;
+    }
   }
 }
 

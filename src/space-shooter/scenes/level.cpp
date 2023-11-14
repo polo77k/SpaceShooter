@@ -6,14 +6,20 @@ namespace space_shooter {
 
 void initLevel(ecs::Manager &manager) {
   // Vaisseau
-  sf::Vector2f initialPosition(415.0f, 790.0f);
-  sf::Vector2f initialVelocite(0.0f, 0.0f);
+  sf::Vector2f initialPosition(manager.gameState().height/2.0f - 30.0f, manager.gameState().width - 110.0f);
+  sf::Vector2f initialVelocite(150.0f, 150.0f);
   auto imagePath = manager.gameState().config.path_to_textures / "spacecraft.png";
 
   manager.registerEntity<space_shooter::ecs::PlayerShipEntity>(initialPosition, imagePath, initialVelocite);
 
   // RenderSystem
   manager.registerSystem<space_shooter::ecs::RenderingSystem>();
+
+  // InputSystem
+  manager.registerSystem<space_shooter::ecs::InputSystem>();
+
+  // MovementSystem
+  manager.registerSystem<space_shooter::ecs::MovementSystem>();
 
   // Register entities/systems here
   // TODO
