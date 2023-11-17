@@ -20,7 +20,7 @@ std::unique_ptr<GameState> initGameState(const GameConfig &game_config) {
           game_config.title, game_config.window_width,
           game_config.window_height, game_config.frame_rate),
       // First scene here is level, so first function to do is level.cpp : init_level()
-      .switch_to_scene = GameState::Scene::Level,
+      .switch_to_scene = GameState::Scene::Menu,
       .running = true,
       .keep_entities = false,
       .keep_systems = false //

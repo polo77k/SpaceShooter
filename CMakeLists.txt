@@ -36,6 +36,7 @@ set(SOURCE_FILES
     src/space-shooter/game_state.cpp
     src/space-shooter/scenes/exit.cpp
     src/space-shooter/scenes/level.cpp
+    src/space-shooter/scenes/menu.cpp
     # Core of ECS
     src/space-shooter/ecs/entity.cpp
     src/space-shooter/ecs/system.cpp
@@ -43,10 +44,12 @@ set(SOURCE_FILES
     # Entities
     src/space-shooter/ecs/entites/background.cpp
     src/space-shooter/ecs/entites/player_ship.cpp
+    src/space-shooter/ecs/entites/menu_entite.cpp
     # Systems
     src/space-shooter/ecs/systems/input_system.cpp
     src/space-shooter/ecs/systems/rendering_system.cpp
     src/space-shooter/ecs/systems/movement_system.cpp
+    src/space-shooter/ecs/systems/menu_system.cpp
     # Components
     src/space-shooter/ecs/components/texture_component.cpp
     src/space-shooter/ecs/components/position_component.cpp

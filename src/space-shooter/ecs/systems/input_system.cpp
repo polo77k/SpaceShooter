@@ -44,6 +44,18 @@ void InputSystem::update(const sf::Time &delta_time,
     {
       input.move_bottom = true;
     }
+    if(sf::Keyboard::isKeyPressed(sf::Keyboard::S))
+    {
+      input.shooting = true;
+    }
+    if(sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
+    {
+      input.escape = true;
+    }
+    if(sf::Keyboard::isKeyPressed(sf::Keyboard::Enter))
+    {
+      input.enter = true;
+    }
   }
 }
 
