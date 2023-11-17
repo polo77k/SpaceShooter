@@ -28,6 +28,10 @@ void MenuSystem::update(const sf::Time &delta_time,
     {
       manager.gameState().switch_to_scene = GameState::Scene::Level;
     }
+    if(input.escape)
+    {
+      manager.gameState().running = false; // stop the game
+    }
     
   }
 }
