@@ -16,7 +16,7 @@ namespace space_shooter::ecs {
 
 MovementSystem::MovementSystem()
     : System{
-          type_list<VelocityComponent, PositionComponent, InputComponent>{}} {}
+          type_list<VelocityComponent, PositionComponent, InputComponent, SpriteComponent>{}} {}
 
 void MovementSystem::update(const sf::Time &delta_time,
                             std::vector<Entity *> &entities, Manager &manager) {

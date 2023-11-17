@@ -9,7 +9,7 @@ struct PositionComponent : Component {
   float y = 0.f;
 
   PositionComponent() = default;
-  PositionComponent(float x, float y) : x{x}, y{y} {}
+  PositionComponent(float x, float y);
 };
 
 } // namespace space_shooter::ecs

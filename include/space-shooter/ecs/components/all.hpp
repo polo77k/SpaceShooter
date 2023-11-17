@@ -5,3 +5,4 @@
 #include <space-shooter/ecs/components/sprite_component.hpp>
 #include <space-shooter/ecs/components/texture_component.hpp>
 #include <space-shooter/ecs/components/velocity_component.hpp>
+#include <space-shooter/ecs/components/text_blink_component.hpp>
