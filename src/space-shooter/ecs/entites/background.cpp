@@ -11,7 +11,7 @@ namespace space_shooter::ecs {
 BackgroundEntity::BackgroundEntity(const std::filesystem::path &texture_path,
                                    int window_width, int window_height) {
   add<PositionComponent>(0.f, 0.f);
-  add<TextureComponent>(texture_path, true);
+  add<TextureComponent>(texture_path, false);
   add<SpriteComponent>(window_width, window_height);
 }
 

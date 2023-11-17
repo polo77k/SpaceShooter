@@ -56,6 +56,7 @@ set(SOURCE_FILES
     src/space-shooter/ecs/components/position_component.cpp
     src/space-shooter/ecs/components/sprite_component.cpp
     src/space-shooter/ecs/components/text_blink_component.cpp
+    src/space-shooter/ecs/components/tag_component.cpp
   )
 
 # Add executable
