@@ -1,6 +1,7 @@
 #include <space-shooter/ecs/systems/shooting_system.hpp>
 
 #include <space-shooter/ecs/entities/player_missile.hpp>
+#include <space-shooter/ecs/entities/enemy_missile.hpp>
 #include <space-shooter/ecs/components/input_component.hpp>
 #include <space-shooter/ecs/components/position_component.hpp>
 #include <space-shooter/ecs/components/tag_component.hpp>
@@ -30,6 +31,7 @@ void ShootingSystem::update(const sf::Time &delta_time,
     const auto &tag = e->get<TagComponent>();
     auto &timer = e->get<ClockComponent>();
 
+    // PlayerShip
     if(tag.tag == "PlayerShip")
     {
         if(input.shooting && timer.timer >= timer.cooldown_timer)
@@ -39,6 +41,22 @@ void ShootingSystem::update(const sf::Time &delta_time,
             sf::Vector2f initialVelocite(200.0f, 200.0f);
             auto imagePath = manager.gameState().config.path_to_textures / "PlayerMissile.png";
             manager.registerEntity<space_shooter::ecs::PlayerMissileEntity>(initialPosition, imagePath, initialVelocite);
+
+            // reset cooldown
+            timer.timer = 0.0f;
+        }
+    }
+
+    // EnemyShip
+    if(tag.tag == "EnemyShip")
+    {
+        if(timer.timer >= timer.cooldown_timer)
+        {
+            // new EnemyMissile
+            sf::Vector2f positionEnemy(pos.x + 30.0f, pos.y + 40.0f);
+            sf::Vector2f velociteEnemy(150.0f, 150.0f);
+            auto imageMissile = manager.gameState().config.path_to_textures / "EnemyMissile.png";
+            manager.registerEntity<space_shooter::ecs::EnemyMissileEntity>(positionEnemy, imageMissile, velociteEnemy);
 
             // reset cooldown
             timer.timer = 0.0f;

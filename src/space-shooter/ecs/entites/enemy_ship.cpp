@@ -21,7 +21,7 @@ EnemyShipEntity::EnemyShipEntity(sf::Vector2f pos, const std::filesystem::path &
   add<SpriteComponent>(201, 158, SpriteComponent::Resize::Scale, 0.5f);
   add<VelocityComponent>(velocity.x, velocity.y);
   add<TagComponent>("EnemyShip");
-  add<ClockComponent>(1.0f);
+  add<ClockComponent>(1.5f);
 }
 
 } // namespace space_shooter::ecs

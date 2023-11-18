@@ -48,6 +48,7 @@ set(SOURCE_FILES
     src/space-shooter/ecs/entites/player_missile.cpp
     src/space-shooter/ecs/entites/enemy_ship.cpp
     src/space-shooter/ecs/entites/enemy_spawner.cpp
+    src/space-shooter/ecs/entites/enemy_missile.cpp
     # Systems
     src/space-shooter/ecs/systems/input_system.cpp
     src/space-shooter/ecs/systems/rendering_system.cpp
