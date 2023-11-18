@@ -45,18 +45,22 @@ set(SOURCE_FILES
     src/space-shooter/ecs/entites/background.cpp
     src/space-shooter/ecs/entites/player_ship.cpp
     src/space-shooter/ecs/entites/menu_entity.cpp
+    src/space-shooter/ecs/entites/player_missile.cpp
     # Systems
     src/space-shooter/ecs/systems/input_system.cpp
     src/space-shooter/ecs/systems/rendering_system.cpp
     src/space-shooter/ecs/systems/movement_system.cpp
     src/space-shooter/ecs/systems/menu_system.cpp
     src/space-shooter/ecs/systems/text_blink_system.cpp
+    src/space-shooter/ecs/systems/shooting_system.cpp
+    src/space-shooter/ecs/systems/clock_system.cpp
     # Components
     src/space-shooter/ecs/components/texture_component.cpp
     src/space-shooter/ecs/components/position_component.cpp
     src/space-shooter/ecs/components/sprite_component.cpp
     src/space-shooter/ecs/components/text_blink_component.cpp
     src/space-shooter/ecs/components/tag_component.cpp
+    src/space-shooter/ecs/components/clock_component.cpp
   )
 
 # Add executable

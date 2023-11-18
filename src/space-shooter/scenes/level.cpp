@@ -26,6 +26,12 @@ void initLevel(ecs::Manager &manager) {
   // MovementSystem
   manager.registerSystem<space_shooter::ecs::MovementSystem>();
 
+  // ClockSystem
+  manager.registerSystem<space_shooter::ecs::ClockSystem>();
+
+  // ShootingSystem
+  manager.registerSystem<space_shooter::ecs::ShootingSystem>();
+
   // Register entities/systems here
   // TODO
   //manager.gameState().switch_to_scene = GameState::Scene::Score;
