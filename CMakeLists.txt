@@ -46,6 +46,8 @@ set(SOURCE_FILES
     src/space-shooter/ecs/entites/player_ship.cpp
     src/space-shooter/ecs/entites/menu_entity.cpp
     src/space-shooter/ecs/entites/player_missile.cpp
+    src/space-shooter/ecs/entites/enemy_ship.cpp
+    src/space-shooter/ecs/entites/enemy_spawner.cpp
     # Systems
     src/space-shooter/ecs/systems/input_system.cpp
     src/space-shooter/ecs/systems/rendering_system.cpp
@@ -54,6 +56,7 @@ set(SOURCE_FILES
     src/space-shooter/ecs/systems/text_blink_system.cpp
     src/space-shooter/ecs/systems/shooting_system.cpp
     src/space-shooter/ecs/systems/clock_system.cpp
+    src/space-shooter/ecs/systems/enemy_spawner_system.cpp
     # Components
     src/space-shooter/ecs/components/texture_component.cpp
     src/space-shooter/ecs/components/position_component.cpp
