@@ -18,7 +18,7 @@ PlayerMissileEntity::PlayerMissileEntity(sf::Vector2f pos, const std::filesystem
   add<PositionComponent>(pos.x, pos.y);
   add<InputComponent>();
   add<TextureComponent>(texture_path);
-  add<SpriteComponent>(143, 137, SpriteComponent::Resize::Scale, 0.5f);
+  add<SpriteComponent>(30, 63, SpriteComponent::Resize::Scale, 0.5f);
   add<VelocityComponent>(velocity.x, velocity.y);
   add<TagComponent>("PlayerMissile");
   add<DamageComponent>(50.0f);

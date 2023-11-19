@@ -73,6 +73,12 @@
     <ClCompile Include="C:\Users\polo7\Documents\ESIEE\E4\Cours E4\Programation C++\Projet\squeleton\squeleton\src\space-shooter\ecs\systems\enemy_spawner_system.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C:\Users\polo7\Documents\ESIEE\E4\Cours E4\Programation C++\Projet\squeleton\squeleton\src\space-shooter\ecs\systems\collision_system.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\polo7\Documents\ESIEE\E4\Cours E4\Programation C++\Projet\squeleton\squeleton\src\space-shooter\ecs\systems\clean_killed_ships_system.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="C:\Users\polo7\Documents\ESIEE\E4\Cours E4\Programation C++\Projet\squeleton\squeleton\src\space-shooter\ecs\components\texture_component.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -89,6 +95,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="C:\Users\polo7\Documents\ESIEE\E4\Cours E4\Programation C++\Projet\squeleton\squeleton\src\space-shooter\ecs\components\clock_component.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\polo7\Documents\ESIEE\E4\Cours E4\Programation C++\Projet\squeleton\squeleton\src\space-shooter\ecs\components\health_component.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\polo7\Documents\ESIEE\E4\Cours E4\Programation C++\Projet\squeleton\squeleton\src\space-shooter\ecs\components\damage_component.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -18,7 +18,7 @@ EnemyMissileEntity::EnemyMissileEntity(sf::Vector2f pos, const std::filesystem::
   add<PositionComponent>(pos.x, pos.y);
   add<InputComponent>();
   add<TextureComponent>(texture_path);
-  add<SpriteComponent>(124, 141, SpriteComponent::Resize::Scale, 0.3f);
+  add<SpriteComponent>(52, 88, SpriteComponent::Resize::Scale, 0.3f);
   add<VelocityComponent>(velocity.x, velocity.y);
   add<TagComponent>("EnemyMissile");
   add<DamageComponent>(50.0f);

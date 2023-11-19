@@ -37,7 +37,7 @@ void ShootingSystem::update(const sf::Time &delta_time,
         if(input.shooting && timer.timer >= timer.cooldown_timer)
         {
             // new PlayerMissile
-            sf::Vector2f initialPosition(pos.x + 8.0f, pos.y - 15.0f);
+            sf::Vector2f initialPosition(pos.x + 35.0f, pos.y - 15.0f);
             sf::Vector2f initialVelocite(200.0f, 200.0f);
             auto imagePath = manager.gameState().config.path_to_textures / "PlayerMissile.png";
             manager.registerEntity<space_shooter::ecs::PlayerMissileEntity>(initialPosition, imagePath, initialVelocite);

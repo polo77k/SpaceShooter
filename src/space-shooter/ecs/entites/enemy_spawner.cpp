@@ -16,7 +16,7 @@ EnemySpawnerEntity::EnemySpawnerEntity(sf::Vector2f pos, const std::filesystem::
 {
   add<PositionComponent>(pos.x, pos.y);
   add<TextureComponent>(texture_path);
-  add<SpriteComponent>(193, 155, SpriteComponent::Resize::Scale, 0.9f);
+  add<SpriteComponent>(148, 111, SpriteComponent::Resize::Scale, 0.9f);
   add<TagComponent>("EnemySpawner");
   add<ClockComponent>(2.5f);
   add<HealthComponent>(2500.0f);

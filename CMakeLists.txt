@@ -58,6 +58,8 @@ set(SOURCE_FILES
     src/space-shooter/ecs/systems/shooting_system.cpp
     src/space-shooter/ecs/systems/clock_system.cpp
     src/space-shooter/ecs/systems/enemy_spawner_system.cpp
+    src/space-shooter/ecs/systems/collision_system.cpp
+    src/space-shooter/ecs/systems/clean_killed_ships_system.cpp
     # Components
     src/space-shooter/ecs/components/texture_component.cpp
     src/space-shooter/ecs/components/position_component.cpp
@@ -66,6 +68,7 @@ set(SOURCE_FILES
     src/space-shooter/ecs/components/tag_component.cpp
     src/space-shooter/ecs/components/clock_component.cpp
     src/space-shooter/ecs/components/health_component.cpp
+    src/space-shooter/ecs/components/damage_component.cpp
   )
 
 # Add executable

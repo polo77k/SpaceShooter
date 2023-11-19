@@ -28,7 +28,7 @@ void EnemySpawnerSystem::update(const sf::Time &delta_time,
     const auto &tag = e->get<TagComponent>();
     auto &timer = e->get<ClockComponent>();
     
-    // Tag PlayerShip
+    // Tag EnemySpawner
     if(tag.tag == "EnemySpawner")
     {
       if(timer.timer >= timer.cooldown_timer)
