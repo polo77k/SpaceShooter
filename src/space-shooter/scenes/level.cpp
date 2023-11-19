@@ -11,7 +11,7 @@ void initLevel(ecs::Manager &manager) {
   auto imageGame = manager.gameState().config.path_to_textures / "game.jpg";
   manager.registerEntity<space_shooter::ecs::BackgroundEntity>(imageGame, window_width, window_heigth);
 
-  // Vaisseau
+  // PlayerShip
   sf::Vector2f initialPosition(manager.gameState().width/2.0f - 40.0f, manager.gameState().height - 110.0f);
   sf::Vector2f initialVelocite(200.0f, 200.0f);
   auto imagePath = manager.gameState().config.path_to_textures / "spacecraft.png";
@@ -21,6 +21,11 @@ void initLevel(ecs::Manager &manager) {
   sf::Vector2f initialEnemy(manager.gameState().width/2.0f - 60.0f, 20.0f);
   auto imageEnemy = manager.gameState().config.path_to_textures / "EnemySpawner.png";
   manager.registerEntity<space_shooter::ecs::EnemySpawnerEntity>(initialEnemy, imageEnemy);
+
+  // PlayerShipHealthBar
+  sf::Vector2f initialBar(0.0f, 0.0f);
+  auto imageBar = manager.gameState().config.path_to_textures / "HealthBar.png";
+  manager.registerEntity<space_shooter::ecs::PlayerShipHealthBarEntity>(initialBar, imageBar);
 
   // EnemySystem
   manager.registerSystem<space_shooter::ecs::EnemySpawnerSystem>();
@@ -48,6 +53,9 @@ void initLevel(ecs::Manager &manager) {
 
   // SceneLevelSystem
   manager.registerSystem<space_shooter::ecs::SceneLevelSystem>();
+
+  // HealthBarDisplaySystem
+  manager.registerSystem<space_shooter::ecs::HealthBarDisplaySystem>();
 
   // TODO
   //manager.gameState().switch_to_scene = GameState::Scene::Score;

@@ -12,3 +12,4 @@
 #include <space-shooter/ecs/systems/clean_killed_ships_system.hpp>
 #include <space-shooter/ecs/systems/scene_level_system.hpp>
 #include <space-shooter/ecs/systems/scene_exit_system.hpp>
+#include <space-shooter/ecs/systems/health_bar_display_system.hpp>

@@ -2,5 +2,5 @@
 
 namespace space_shooter::ecs {
     
-    HealthComponent::HealthComponent(float health) : health{health} {}
+    HealthComponent::HealthComponent(float health) : health{health}, max_health{health} {}
 }
