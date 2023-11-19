@@ -7,6 +7,7 @@
 #include <space-shooter/ecs/components/velocity_component.hpp>
 #include <space-shooter/ecs/components/tag_component.hpp>
 #include <space-shooter/ecs/components/clock_component.hpp>
+#include <space-shooter/ecs/components/health_component.hpp>
 
 #include <SFML/Graphics/Texture.hpp>
 #include <SFML/System/Time.hpp>
@@ -22,6 +23,7 @@ EnemyShipEntity::EnemyShipEntity(sf::Vector2f pos, const std::filesystem::path &
   add<VelocityComponent>(velocity.x, velocity.y);
   add<TagComponent>("EnemyShip");
   add<ClockComponent>(1.5f);
+  add<HealthComponent>(250.0f);
 }
 
 } // namespace space_shooter::ecs

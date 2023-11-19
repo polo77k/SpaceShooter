@@ -6,6 +6,7 @@
 #include <space-shooter/ecs/components/texture_component.hpp>
 #include <space-shooter/ecs/components/velocity_component.hpp>
 #include <space-shooter/ecs/components/tag_component.hpp>
+#include <space-shooter/ecs/components/damage_component.hpp>
 
 #include <SFML/Graphics/Texture.hpp>
 #include <SFML/System/Time.hpp>
@@ -20,6 +21,7 @@ PlayerMissileEntity::PlayerMissileEntity(sf::Vector2f pos, const std::filesystem
   add<SpriteComponent>(143, 137, SpriteComponent::Resize::Scale, 0.5f);
   add<VelocityComponent>(velocity.x, velocity.y);
   add<TagComponent>("PlayerMissile");
+  add<DamageComponent>(50.0f);
 }
 
 } // namespace space_shooter::ecs

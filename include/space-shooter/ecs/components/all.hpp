@@ -8,3 +8,5 @@
 #include <space-shooter/ecs/components/text_blink_component.hpp>
 #include <space-shooter/ecs/components/tag_component.hpp>
 #include <space-shooter/ecs/components/clock_component.hpp>
+#include <space-shooter/ecs/components/health_component.hpp>
+#include <space-shooter/ecs/components/damage_component.hpp>

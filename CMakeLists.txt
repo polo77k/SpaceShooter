@@ -65,6 +65,7 @@ set(SOURCE_FILES
     src/space-shooter/ecs/components/text_blink_component.cpp
     src/space-shooter/ecs/components/tag_component.cpp
     src/space-shooter/ecs/components/clock_component.cpp
+    src/space-shooter/ecs/components/health_component.cpp
   )
 
 # Add executable
