@@ -46,6 +46,9 @@ void initLevel(ecs::Manager &manager) {
   // CleanKilledShipsSystem
   manager.registerSystem<space_shooter::ecs::CleanKilledShipsSystem>();
 
+  // SceneLevelSystem
+  manager.registerSystem<space_shooter::ecs::SceneLevelSystem>();
+
   // TODO
   //manager.gameState().switch_to_scene = GameState::Scene::Score;
 }

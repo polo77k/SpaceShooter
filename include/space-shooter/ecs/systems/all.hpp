@@ -10,3 +10,5 @@
 #include <space-shooter/ecs/systems/enemy_spawner_system.hpp>
 #include <space-shooter/ecs/systems/collision_system.hpp>
 #include <space-shooter/ecs/systems/clean_killed_ships_system.hpp>
+#include <space-shooter/ecs/systems/scene_level_system.hpp>
+#include <space-shooter/ecs/systems/scene_exit_system.hpp>

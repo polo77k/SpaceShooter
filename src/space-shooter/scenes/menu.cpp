@@ -12,10 +12,10 @@ void menuGame(ecs::Manager& manager)
     auto imagePath = manager.gameState().config.path_to_textures / "menu.jpg";
     manager.registerEntity<space_shooter::ecs::BackgroundEntity>(imagePath, window_width, window_heigth);
 
-    // MenuEntity
+    // SceneMenu
     auto font = manager.gameState().config.path_to_fonts / "Roboto-BoldCondensed.ttf";
     std::string texte = "Appuyez sur Entrer pour commencer la partie";
-    manager.registerEntity<space_shooter::ecs::MenuEntity>();
+    manager.registerEntity<space_shooter::ecs::SceneMenu>();
 
     // Texte blink
     manager.registerSystem<space_shooter::ecs::TextBlinkSystem>();
