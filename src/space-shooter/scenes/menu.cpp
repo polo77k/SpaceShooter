@@ -26,8 +26,8 @@ void menuGame(ecs::Manager& manager)
     // InputSystem
     manager.registerSystem<space_shooter::ecs::InputSystem>();
 
-    // MenuSystem
-    manager.registerSystem<space_shooter::ecs::MenuSystem>();
+    // SceneMenuSystem
+    manager.registerSystem<space_shooter::ecs::SceneMenuSystem>();
 }
 
 } // namespace space_shooter

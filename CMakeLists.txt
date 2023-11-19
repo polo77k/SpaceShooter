@@ -53,7 +53,7 @@ set(SOURCE_FILES
     src/space-shooter/ecs/systems/input_system.cpp
     src/space-shooter/ecs/systems/rendering_system.cpp
     src/space-shooter/ecs/systems/movement_system.cpp
-    src/space-shooter/ecs/systems/menu_system.cpp
+    src/space-shooter/ecs/systems/scene_menu_system.cpp
     src/space-shooter/ecs/systems/text_blink_system.cpp
     src/space-shooter/ecs/systems/shooting_system.cpp
     src/space-shooter/ecs/systems/clock_system.cpp
