@@ -29,12 +29,12 @@ void ShootingSystem::update(const sf::Time &delta_time,
     const auto &input = e->get<InputComponent>();
     const auto &pos = e->get<PositionComponent>();
     const auto &tag = e->get<TagComponent>();
-    auto &timer = e->get<ClockComponent>();
+    auto &clock = e->get<ClockComponent>();
 
     // PlayerShip
     if(tag.tag == "PlayerShip")
     {
-        if(input.shooting && timer.timer >= timer.cooldown_timer)
+        if(input.shooting && clock.timer >= clock.cooldown_timer)
         {
             // new PlayerMissile
             sf::Vector2f initialPosition(pos.x + 35.0f, pos.y - 15.0f);
@@ -43,14 +43,14 @@ void ShootingSystem::update(const sf::Time &delta_time,
             manager.registerEntity<space_shooter::ecs::PlayerMissileEntity>(initialPosition, imagePath, initialVelocite);
 
             // reset cooldown
-            timer.timer = 0.0f;
+            clock.timer = 0.0f;
         }
     }
 
     // EnemyShip
     if(tag.tag == "EnemyShip")
     {
-        if(timer.timer >= timer.cooldown_timer)
+        if(clock.timer >= clock.cooldown_timer)
         {
             // new EnemyMissile
             sf::Vector2f positionEnemy(pos.x + 30.0f, pos.y + 40.0f);
@@ -59,7 +59,7 @@ void ShootingSystem::update(const sf::Time &delta_time,
             manager.registerEntity<space_shooter::ecs::EnemyMissileEntity>(positionEnemy, imageMissile, velociteEnemy);
 
             // reset cooldown
-            timer.timer = 0.0f;
+            clock.timer = 0.0f;
         }
     }
     

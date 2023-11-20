@@ -10,3 +10,5 @@
 #include <space-shooter/ecs/components/clock_component.hpp>
 #include <space-shooter/ecs/components/health_component.hpp>
 #include <space-shooter/ecs/components/damage_component.hpp>
+#include <space-shooter/ecs/components/timer_component.hpp>
+#include <space-shooter/ecs/components/text_component.hpp>

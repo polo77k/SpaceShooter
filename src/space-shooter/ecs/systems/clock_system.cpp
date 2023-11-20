@@ -20,8 +20,8 @@ void ClockSystem::update(const sf::Time &delta_time,
   for (auto e : entities) {
     assert(hasRequiredComponents(*e));
 
-    auto &timer = e->get<ClockComponent>();
-    timer.timer += delta_time.asSeconds();
+    auto &clock = e->get<ClockComponent>();
+    clock.timer += delta_time.asSeconds();
   }
 }
 

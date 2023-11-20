@@ -57,6 +57,17 @@ void initLevel(ecs::Manager &manager) {
   // HealthBarDisplaySystem
   manager.registerSystem<space_shooter::ecs::HealthBarDisplaySystem>();
 
+  // Timer
+  sf::Time initialTime = sf::seconds(60.0f);
+  auto font_path = manager.gameState().config.path_to_fonts / "Roboto-BoldCondensed.ttf";
+  manager.registerEntity<space_shooter::ecs::LevelTimerEntity>(initialTime, font_path);
+
+  // TimerSystem
+  manager.registerSystem<space_shooter::ecs::TimerSystem>();
+
+  // TextRenderingSystem
+  manager.registerSystem<space_shooter::ecs::TextRenderingSystem>();
+
   // TODO
   //manager.gameState().switch_to_scene = GameState::Scene::Score;
 }

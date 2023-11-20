@@ -55,6 +55,9 @@
     <ClCompile Include="C:\Users\polo7\Documents\ESIEE\E4\Cours E4\Programation C++\Projet\squeleton\squeleton\src\space-shooter\ecs\entites\player_ship_health_bar.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C:\Users\polo7\Documents\ESIEE\E4\Cours E4\Programation C++\Projet\squeleton\squeleton\src\space-shooter\ecs\entites\level_timer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="C:\Users\polo7\Documents\ESIEE\E4\Cours E4\Programation C++\Projet\squeleton\squeleton\src\space-shooter\ecs\systems\input_system.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -94,6 +97,12 @@
     <ClCompile Include="C:\Users\polo7\Documents\ESIEE\E4\Cours E4\Programation C++\Projet\squeleton\squeleton\src\space-shooter\ecs\systems\health_bar_display_system.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C:\Users\polo7\Documents\ESIEE\E4\Cours E4\Programation C++\Projet\squeleton\squeleton\src\space-shooter\ecs\systems\timer_system.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\polo7\Documents\ESIEE\E4\Cours E4\Programation C++\Projet\squeleton\squeleton\src\space-shooter\ecs\systems\text_rendering_system.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="C:\Users\polo7\Documents\ESIEE\E4\Cours E4\Programation C++\Projet\squeleton\squeleton\src\space-shooter\ecs\components\texture_component.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -116,6 +125,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="C:\Users\polo7\Documents\ESIEE\E4\Cours E4\Programation C++\Projet\squeleton\squeleton\src\space-shooter\ecs\components\damage_component.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\polo7\Documents\ESIEE\E4\Cours E4\Programation C++\Projet\squeleton\squeleton\src\space-shooter\ecs\components\timer_component.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\polo7\Documents\ESIEE\E4\Cours E4\Programation C++\Projet\squeleton\squeleton\src\space-shooter\ecs\components\text_component.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -26,12 +26,12 @@ void EnemySpawnerSystem::update(const sf::Time &delta_time,
 
     auto &pos = e->get<PositionComponent>();
     const auto &tag = e->get<TagComponent>();
-    auto &timer = e->get<ClockComponent>();
+    auto &clock = e->get<ClockComponent>();
     
     // Tag EnemySpawner
     if(tag.tag == "EnemySpawner")
     {
-      if(timer.timer >= timer.cooldown_timer)
+      if(clock.timer >= clock.cooldown_timer)
         {
           // random position
           auto x1 = manager.gameState().width - 100.0f;
@@ -44,7 +44,7 @@ void EnemySpawnerSystem::update(const sf::Time &delta_time,
           manager.registerEntity<space_shooter::ecs::EnemyShipEntity>(initialPosition, imagePath, initialVelocite);
 
           // reset cooldown
-          timer.timer = 0.0f;
+          clock.timer = 0.0f;
         }
     }
 

@@ -51,6 +51,7 @@ set(SOURCE_FILES
     src/space-shooter/ecs/entites/enemy_missile.cpp
     src/space-shooter/ecs/entites/scene_exit.cpp
     src/space-shooter/ecs/entites/player_ship_health_bar.cpp
+    src/space-shooter/ecs/entites/level_timer.cpp
     # Systems
     src/space-shooter/ecs/systems/input_system.cpp
     src/space-shooter/ecs/systems/rendering_system.cpp
@@ -65,6 +66,8 @@ set(SOURCE_FILES
     src/space-shooter/ecs/systems/scene_level_system.cpp
     src/space-shooter/ecs/systems/scene_exit_system.cpp
     src/space-shooter/ecs/systems/health_bar_display_system.cpp
+    src/space-shooter/ecs/systems/timer_system.cpp
+    src/space-shooter/ecs/systems/text_rendering_system.cpp
     # Components
     src/space-shooter/ecs/components/texture_component.cpp
     src/space-shooter/ecs/components/position_component.cpp
@@ -74,6 +77,8 @@ set(SOURCE_FILES
     src/space-shooter/ecs/components/clock_component.cpp
     src/space-shooter/ecs/components/health_component.cpp
     src/space-shooter/ecs/components/damage_component.cpp
+    src/space-shooter/ecs/components/timer_component.cpp
+    src/space-shooter/ecs/components/text_component.cpp
   )
 
 # Add executable

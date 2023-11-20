@@ -13,3 +13,5 @@
 #include <space-shooter/ecs/systems/scene_level_system.hpp>
 #include <space-shooter/ecs/systems/scene_exit_system.hpp>
 #include <space-shooter/ecs/systems/health_bar_display_system.hpp>
+#include <space-shooter/ecs/systems/timer_system.hpp>
+#include <space-shooter/ecs/systems/text_rendering_system.hpp>
