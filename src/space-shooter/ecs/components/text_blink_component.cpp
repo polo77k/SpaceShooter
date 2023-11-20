@@ -2,9 +2,5 @@
 
 namespace space_shooter::ecs {
 
-    TextBlinkComponent::TextBlinkComponent(const sf::Font& font, const std::string& texte)
-    {
-        text.setFont(font);
-        text.setString(texte);
-    }
+    TextBlinkComponent::TextBlinkComponent(sf::Time blinkTime) : blinkTime{blinkTime} {}
 }

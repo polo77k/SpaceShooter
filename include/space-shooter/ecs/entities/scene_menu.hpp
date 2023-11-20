@@ -10,7 +10,7 @@ namespace space_shooter::ecs {
 
 class SceneMenu : public Entity {
 public:
-  SceneMenu(const sf::Font& font, const std::string& texte);
+  SceneMenu(const std::string& text, const std::filesystem::path &font_path);
   
   SceneMenu();
 

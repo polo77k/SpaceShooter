@@ -2,18 +2,17 @@
 
 #include <space-shooter/ecs/component.hpp>
 
-#include <SFML/Graphics/Text.hpp>
+#include <SFML/System/Time.hpp>
 
 namespace space_shooter::ecs {
 
 struct TextBlinkComponent : Component {
 
-  sf::Text text;
   bool isVisible = true;
-  float blinkTime = 0.5f; // fréquence de clignotement
+  sf::Time blinkTime = sf::seconds(0.5f); // fréquence de clignotement
 
-  TextBlinkComponent(const sf::Font& font, const std::string& texte);
-
+  TextBlinkComponent() = default;
+  TextBlinkComponent(sf::Time blinkTime);
 };
 
 } // namespace space_shooter::ecs

@@ -1,7 +1,7 @@
-#include <SFML/Window/Keyboard.hpp>
 #include <space-shooter/ecs/systems/text_blink_system.hpp>
 
 #include <space-shooter/ecs/components/text_blink_component.hpp>
+#include <space-shooter/ecs/components/text_component.hpp>
 #include <space-shooter/ecs/entity.hpp>
 #include <space-shooter/ecs/system.hpp>
 #include <space-shooter/game_state.hpp>
@@ -13,7 +13,7 @@
 
 namespace space_shooter::ecs {
 
-TextBlinkSystem::TextBlinkSystem() : System{type_list<TextBlinkComponent>{}} {}
+TextBlinkSystem::TextBlinkSystem() : System{type_list<TextBlinkComponent, TextComponent>{}} {}
 
 void TextBlinkSystem::update(const sf::Time &delta_time,
                          std::vector<Entity *> &entities, Manager &manager) {
@@ -22,19 +22,40 @@ void TextBlinkSystem::update(const sf::Time &delta_time,
     assert(hasRequiredComponents(*e));
 
     auto &textBlink = e->get<TextBlinkComponent>();
+    auto &text = e->get<TextComponent>();
 
-    textBlink.blinkTime -= delta_time.asSeconds();
-    if(textBlink.blinkTime <= 0)
+    textBlink.blinkTime -= delta_time;
+    if(textBlink.blinkTime <= sf::Time::Zero)
     {
-        textBlink.isVisible = !textBlink.blinkTime;
-        textBlink.blinkTime = 0.5f;
+        textBlink.isVisible = !textBlink.isVisible;
+        textBlink.blinkTime = sf::seconds(0.5f);
     }
 
     if(textBlink.isVisible)
-    {
-        manager.gameState().rendering_window->draw(textBlink.text);
+    {    
+        sf::Text textDisplay;
+        textDisplay.setString(text.text);
+
+        if(!text.loaded)
+        {
+            if(text.font.loadFromFile(text.font_path.string()))
+            {
+                text.loaded = true;
+            }
+            else
+            {
+                std::cerr << "Probleme font : " << text.font_path.string() << std::endl;
+            }
+        }
+
+        textDisplay.setFont(text.font);
+        textDisplay.setCharacterSize(text.characterSize);
+        textDisplay.setPosition(text.pos.x, text.pos.y);
+        textDisplay.setColor(text.color);
+        
+        // Draw Text if is visible
+        manager.gameState().rendering_window->draw(textDisplay);
     }
-    
   }
 }
 
