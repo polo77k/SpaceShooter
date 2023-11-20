@@ -22,7 +22,7 @@ EnemyShipEntity::EnemyShipEntity(sf::Vector2f pos, const std::filesystem::path &
   add<SpriteComponent>(149, 115, SpriteComponent::Resize::Scale, 0.5f);
   add<VelocityComponent>(velocity.x, velocity.y);
   add<TagComponent>("EnemyShip");
-  add<ClockComponent>(1.5f);
+  add<ClockComponent>(sf::seconds(1.0f));
   add<HealthComponent>(250.0f);
 }
 

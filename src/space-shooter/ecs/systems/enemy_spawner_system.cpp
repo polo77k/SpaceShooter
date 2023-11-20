@@ -31,23 +31,22 @@ void EnemySpawnerSystem::update(const sf::Time &delta_time,
     // Tag EnemySpawner
     if(tag.tag == "EnemySpawner")
     {
-      if(clock.timer >= clock.cooldown_timer)
+      if(clock.clock >= clock.cooldown)
         {
           // random position
           auto x1 = manager.gameState().width - 100.0f;
           auto x = random(50, x1);
           
           // new EnemyShip
-          sf::Vector2f initialPosition(x, pos.y);
+          sf::Vector2f initialPosition(x, pos.y + 100.0f);
           sf::Vector2f initialVelocite(150.0f, 150.0f);
           auto imagePath = manager.gameState().config.path_to_textures / "EnemyShip.png";
           manager.registerEntity<space_shooter::ecs::EnemyShipEntity>(initialPosition, imagePath, initialVelocite);
 
           // reset cooldown
-          clock.timer = 0.0f;
+          clock.clock = sf::Time::Zero;
         }
     }
-
   }
 }
 

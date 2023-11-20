@@ -21,7 +21,7 @@ void ClockSystem::update(const sf::Time &delta_time,
     assert(hasRequiredComponents(*e));
 
     auto &clock = e->get<ClockComponent>();
-    clock.timer += delta_time.asSeconds();
+    clock.clock += delta_time;
   }
 }
 

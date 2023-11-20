@@ -24,7 +24,7 @@ void SceneExitSystem::update(const sf::Time &delta_time,
     const auto &clock = e->get<ClockComponent>();
 
     // Change scene after cooldown
-    if(clock.timer >= clock.cooldown_timer)
+    if(clock.clock >= clock.cooldown)
     {
       manager.gameState().switch_to_scene = GameState::Scene::Menu;
     }

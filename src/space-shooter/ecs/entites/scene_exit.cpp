@@ -4,18 +4,19 @@
 #include <space-shooter/ecs/components/text_blink_component.hpp>
 
 #include <SFML/Graphics.hpp>
+#include <SFML/System/Time.hpp>
 
 #include <filesystem>
 
 namespace space_shooter::ecs {
 
 SceneExit::SceneExit(const sf::Font& font, const std::string& texte) {
-  add<ClockComponent>(4.0f);
+  add<ClockComponent>(sf::seconds(3.0f));
   //add<TextBlinkComponent>(font, texte);
 }
 
 SceneExit::SceneExit() {
-  add<ClockComponent>(4.0f);
+  add<ClockComponent>(sf::seconds(3.0f));
 }
 
 

@@ -2,14 +2,16 @@
 
 #include <space-shooter/ecs/component.hpp>
 
+#include <SFML/System/Time.hpp>
+
 namespace space_shooter::ecs {
 
 struct ClockComponent : Component {
-  float timer = 0.0f;
-  float cooldown_timer = 1.0f;
+  sf::Time clock = sf::Time::Zero;
+  sf::Time cooldown;
 
   ClockComponent() = default;
-  ClockComponent(float cooldown);
+  ClockComponent(sf::Time cooldown);
 };
 
 } // namespace space_shooter::ecs

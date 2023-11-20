@@ -11,6 +11,7 @@
 #include <space-shooter/utils.hpp>
 
 #include <SFML/Graphics.hpp>
+#include <SFML/System/Time.hpp>
 
 #include <cassert>
 
@@ -34,7 +35,7 @@ void ShootingSystem::update(const sf::Time &delta_time,
     // PlayerShip
     if(tag.tag == "PlayerShip")
     {
-        if(input.shooting && clock.timer >= clock.cooldown_timer)
+        if(input.shooting && clock.clock >= clock.cooldown)
         {
             // new PlayerMissile
             sf::Vector2f initialPosition(pos.x + 35.0f, pos.y - 15.0f);
@@ -43,14 +44,14 @@ void ShootingSystem::update(const sf::Time &delta_time,
             manager.registerEntity<space_shooter::ecs::PlayerMissileEntity>(initialPosition, imagePath, initialVelocite);
 
             // reset cooldown
-            clock.timer = 0.0f;
+            clock.clock = sf::Time::Zero;
         }
     }
 
     // EnemyShip
     if(tag.tag == "EnemyShip")
     {
-        if(clock.timer >= clock.cooldown_timer)
+        if(clock.clock >= clock.cooldown)
         {
             // new EnemyMissile
             sf::Vector2f positionEnemy(pos.x + 30.0f, pos.y + 40.0f);
@@ -59,10 +60,9 @@ void ShootingSystem::update(const sf::Time &delta_time,
             manager.registerEntity<space_shooter::ecs::EnemyMissileEntity>(positionEnemy, imageMissile, velociteEnemy);
 
             // reset cooldown
-            clock.timer = 0.0f;
+            clock.clock = sf::Time::Zero;
         }
     }
-    
   }
 }
 

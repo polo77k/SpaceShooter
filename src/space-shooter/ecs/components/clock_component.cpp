@@ -2,5 +2,5 @@
 
 namespace space_shooter::ecs {
     
-    ClockComponent::ClockComponent(float cooldown) : cooldown_timer{cooldown} {}
+    ClockComponent::ClockComponent(sf::Time cooldown) : cooldown{cooldown} {}
 }
