@@ -23,7 +23,7 @@ PlayerShipEntity::PlayerShipEntity(sf::Vector2f pos, const std::filesystem::path
   add<VelocityComponent>(velocity.x, velocity.y);
   add<TagComponent>("PlayerShip");
   add<ClockComponent>(sf::seconds(0.1f));
-  add<HealthComponent>(500.0f);
+  add<HealthComponent>(1000.0f);
 }
 
 } // namespace space_shooter::ecs

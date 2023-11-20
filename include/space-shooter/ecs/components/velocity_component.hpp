@@ -9,7 +9,7 @@ struct VelocityComponent : Component {
   float vy = 0.f; // no velocity = fixed
 
   VelocityComponent() = default;
-  VelocityComponent(float vx, float vy) : vx{vx}, vy{vy} {}
+  VelocityComponent(float vx, float vy);
 };
 
 } // namespace space_shooter::ecs

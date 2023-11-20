@@ -13,8 +13,7 @@ struct SpriteComponent : Component {
   float size = 1.0f; // size by default
 
   SpriteComponent() = default;
-  SpriteComponent(int width, int height, Resize resize = Resize::Crop, float size = 1.0f)
-      : width{width}, height{height}, resize{resize}, size{size} {}
+  SpriteComponent(int width, int height, Resize resize = Resize::Crop, float size = 1.0f);
 };
 
 } // namespace space_shooter::ecs

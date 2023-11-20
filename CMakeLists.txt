@@ -74,6 +74,8 @@ set(SOURCE_FILES
     src/space-shooter/ecs/components/texture_component.cpp
     src/space-shooter/ecs/components/position_component.cpp
     src/space-shooter/ecs/components/sprite_component.cpp
+    src/space-shooter/ecs/components/input_component.cpp
+    src/space-shooter/ecs/components/velocity_component.cpp
     src/space-shooter/ecs/components/text_blink_component.cpp
     src/space-shooter/ecs/components/tag_component.cpp
     src/space-shooter/ecs/components/clock_component.cpp
