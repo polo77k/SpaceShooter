@@ -15,3 +15,4 @@
 #include <space-shooter/ecs/systems/health_bar_display_system.hpp>
 #include <space-shooter/ecs/systems/timer_system.hpp>
 #include <space-shooter/ecs/systems/text_rendering_system.hpp>
+#include <space-shooter/ecs/systems/scoring_system.hpp>

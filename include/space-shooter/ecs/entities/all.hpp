@@ -10,3 +10,4 @@
 #include <space-shooter/ecs/entities/scene_exit.hpp>
 #include <space-shooter/ecs/entities/player_ship_health_bar.hpp>
 #include <space-shooter/ecs/entities/level_timer.hpp>
+#include <space-shooter/ecs/entities/score_display.hpp>

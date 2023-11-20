@@ -68,6 +68,9 @@ void initLevel(ecs::Manager &manager) {
   // TextRenderingSystem
   manager.registerSystem<space_shooter::ecs::TextRenderingSystem>();
 
+  // ScoreDisplay
+  manager.registerEntity<space_shooter::ecs::ScoreDisplayEntity>(font_path);
+
   // TODO
   //manager.gameState().switch_to_scene = GameState::Scene::Score;
 }

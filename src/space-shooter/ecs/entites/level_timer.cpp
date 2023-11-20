@@ -4,7 +4,6 @@
 #include <space-shooter/ecs/components/text_component.hpp>
 #include <space-shooter/ecs/components/tag_component.hpp>
 
-#include <SFML/Graphics/Texture.hpp>
 #include <SFML/System/Time.hpp>
 
 namespace space_shooter::ecs {
