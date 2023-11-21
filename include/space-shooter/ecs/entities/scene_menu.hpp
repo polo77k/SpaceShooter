@@ -2,6 +2,10 @@
 
 #include <space-shooter/ecs/entity.hpp>
 
+#include <space-shooter/ecs/components/input_component.hpp>
+#include <space-shooter/ecs/components/text_component.hpp>
+#include <space-shooter/ecs/components/text_blink_component.hpp>
+
 #include <SFML/Graphics/Text.hpp>
 #include <filesystem>
 #include <memory>

@@ -1,11 +1,5 @@
 #include <space-shooter/ecs/entities/level_timer.hpp>
 
-#include <space-shooter/ecs/components/timer_component.hpp>
-#include <space-shooter/ecs/components/text_component.hpp>
-#include <space-shooter/ecs/components/tag_component.hpp>
-
-#include <SFML/System/Time.hpp>
-
 namespace space_shooter::ecs {
 
 LevelTimerEntity::LevelTimerEntity(sf::Time initialTime, const std::filesystem::path &font_path)

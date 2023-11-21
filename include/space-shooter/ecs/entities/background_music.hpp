@@ -2,6 +2,8 @@
 
 #include <space-shooter/ecs/entity.hpp>
 
+#include <space-shooter/ecs/components/music_component.hpp>
+
 #include <filesystem>
 #include <memory>
 

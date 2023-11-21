@@ -43,6 +43,7 @@ void EnemyChasingSystem::update(const sf::Time &delta_time,
         // Tag EnemyShip
         if(tag.tag == "EnemyShip")
         {
+            // On calcule les 2 velocity (ça pourra servir dans le futur), mais nous en utiliserons qu'une seule
             sf::Vector2f direction;
             direction.x = posShip.value().x - pos.x;
             direction.y = posShip.value().y - pos.y;

@@ -2,7 +2,12 @@
 
 #include <space-shooter/ecs/entity.hpp>
 
+#include <space-shooter/ecs/components/position_component.hpp>
+#include <space-shooter/ecs/components/sprite_component.hpp>
+#include <space-shooter/ecs/components/texture_component.hpp>
+
 #include <filesystem>
+
 #include <memory>
 
 namespace space_shooter::ecs {
