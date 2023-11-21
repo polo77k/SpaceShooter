@@ -20,3 +20,4 @@
 #include <space-shooter/ecs/systems/music_system.hpp>
 #include <space-shooter/ecs/systems/movement_spawner_system.hpp>
 #include <space-shooter/ecs/systems/victory_system.hpp>
+#include <space-shooter/ecs/systems/scene_victory_system.hpp>

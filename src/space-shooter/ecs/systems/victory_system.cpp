@@ -38,7 +38,7 @@ void VictorySystem::update(const sf::Time &delta_time,
   // Change Scene
   if(victory)
   {
-    manager.gameState().switch_to_scene = GameState::Scene::Menu;
+    manager.gameState().switch_to_scene = GameState::Scene::Victory;
   }
 }
 
