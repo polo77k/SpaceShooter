@@ -27,6 +27,13 @@ void initLevel(ecs::Manager &manager) {
   auto imageBar = manager.gameState().config.path_to_textures / "HealthBar.png";
   manager.registerEntity<space_shooter::ecs::PlayerShipHealthBarEntity>(initialBar, imageBar);
 
+  // BackgroundMusic
+  auto musicPath = manager.gameState().config.path_to_audio / "music_fight.wav";
+  manager.registerEntity<space_shooter::ecs::BackgroundMusicEntity>(musicPath);
+
+  // MusicSystem
+  manager.registerSystem<space_shooter::ecs::MusicSystem>();
+
   // EnemySystem
   manager.registerSystem<space_shooter::ecs::EnemySpawnerSystem>();
 

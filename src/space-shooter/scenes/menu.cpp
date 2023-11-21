@@ -17,6 +17,13 @@ void menuGame(ecs::Manager& manager)
     std::string texte = "Appuyez sur Entree pour commencer la partie\n\nEchap pour quitter le jeu";
     manager.registerEntity<space_shooter::ecs::SceneMenu>(texte, font_path);
 
+    // BackgroundMusic
+    auto musicPath = manager.gameState().config.path_to_audio / "musique_menu.wav";
+    manager.registerEntity<space_shooter::ecs::BackgroundMusicEntity>(musicPath);
+
+    // MusicSystem
+    manager.registerSystem<space_shooter::ecs::MusicSystem>();
+
     // RenderSystem
     manager.registerSystem<space_shooter::ecs::RenderingSystem>();
     

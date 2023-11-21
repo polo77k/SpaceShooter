@@ -11,12 +11,12 @@
 namespace space_shooter::ecs {
 
 SceneExit::SceneExit(const sf::Font& font, const std::string& texte) {
-  add<ClockComponent>(sf::seconds(3.0f));
+  add<ClockComponent>(sf::seconds(4.0f));
   //add<TextBlinkComponent>(font, texte);
 }
 
 SceneExit::SceneExit() {
-  add<ClockComponent>(sf::seconds(3.0f));
+  add<ClockComponent>(sf::seconds(4.0f));
 }
 
 
