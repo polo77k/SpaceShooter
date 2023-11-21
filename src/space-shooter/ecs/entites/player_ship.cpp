@@ -22,7 +22,7 @@ PlayerShipEntity::PlayerShipEntity(sf::Vector2f pos, const std::filesystem::path
   add<SpriteComponent>(720, 713, SpriteComponent::Resize::Scale, 0.12f);
   add<VelocityComponent>(velocity.x, velocity.y);
   add<TagComponent>("PlayerShip");
-  add<ClockComponent>(sf::seconds(0.1f));
+  add<ClockComponent>(sf::seconds(0.2f));
   add<HealthComponent>(1000.0f);
 }
 

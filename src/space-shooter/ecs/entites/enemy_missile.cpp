@@ -21,7 +21,7 @@ EnemyMissileEntity::EnemyMissileEntity(sf::Vector2f pos, const std::filesystem::
   add<SpriteComponent>(52, 88, SpriteComponent::Resize::Scale, 0.3f);
   add<VelocityComponent>(velocity.x, velocity.y);
   add<TagComponent>("EnemyMissile");
-  add<DamageComponent>(50.0f);
+  add<DamageComponent>(100.0f);
 }
 
 } // namespace space_shooter::ecs

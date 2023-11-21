@@ -33,17 +33,17 @@ void MovementSpawnerSystem::update(const sf::Time &delta_time,
     if(tag.tag == "EnemySpawner")
     {
       // Switch direction
-      if(pos.x < 100)
+      if(pos.x <= 100)
       {
         vel.vx = -vel.vx; 
       }
-      if(pos.x > 700)
+      if(pos.x >= 700)
       {
         vel.vx = -vel.vx;
       }
 
       // Direction
-      if(vel.vx < 0.0f)
+      if(vel.vx <= 0.0f)
       {
         if(pos.x + vel.vx * delta_time.asSeconds() > 0)
         {
