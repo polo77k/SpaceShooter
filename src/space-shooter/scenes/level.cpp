@@ -69,7 +69,7 @@ void initLevel(ecs::Manager &manager) {
   manager.registerSystem<space_shooter::ecs::HealthBarDisplaySystem>();
 
   // Timer
-  sf::Time initialTime = sf::seconds(60.0f);
+  sf::Time initialTime = sf::seconds(90.0f);
   auto font_path = manager.gameState().config.path_to_fonts / "Roboto-BoldCondensed.ttf";
   manager.registerEntity<space_shooter::ecs::LevelTimerEntity>(initialTime, font_path);
 
@@ -87,6 +87,9 @@ void initLevel(ecs::Manager &manager) {
 
   // CleanSoundsSystem
   manager.registerSystem<space_shooter::ecs::CleanSoundsSystem>();
+
+  // EnemyChasingSystem
+  manager.registerSystem<space_shooter::ecs::EnemyChasingSystem>();
 
   // VictorySystem
   manager.registerSystem<space_shooter::ecs::VictorySystem>();

@@ -363,6 +363,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="C:\Users\polo7\Documents\ESIEE\E4\Cours E4\Programation C++\Projet\squeleton\squeleton\src\space-shooter\ecs\systems\victory_system.cpp" />
     <ClCompile Include="C:\Users\polo7\Documents\ESIEE\E4\Cours E4\Programation C++\Projet\squeleton\squeleton\src\space-shooter\ecs\systems\scene_victory_system.cpp" />
     <ClCompile Include="C:\Users\polo7\Documents\ESIEE\E4\Cours E4\Programation C++\Projet\squeleton\squeleton\src\space-shooter\ecs\systems\clean_sounds_system.cpp" />
+    <ClCompile Include="C:\Users\polo7\Documents\ESIEE\E4\Cours E4\Programation C++\Projet\squeleton\squeleton\src\space-shooter\ecs\systems\enemy_chasing_system.cpp" />
     <ClCompile Include="C:\Users\polo7\Documents\ESIEE\E4\Cours E4\Programation C++\Projet\squeleton\squeleton\src\space-shooter\ecs\components\texture_component.cpp" />
     <ClCompile Include="C:\Users\polo7\Documents\ESIEE\E4\Cours E4\Programation C++\Projet\squeleton\squeleton\src\space-shooter\ecs\components\position_component.cpp" />
     <ClCompile Include="C:\Users\polo7\Documents\ESIEE\E4\Cours E4\Programation C++\Projet\squeleton\squeleton\src\space-shooter\ecs\components\sprite_component.cpp" />

@@ -56,6 +56,12 @@ void MovementSystem::update(const sf::Time &delta_time,
       }
     }
 
+    // Tag EnemyShip
+    if(tag.tag == "EnemyShip")
+    {
+      pos.x += vel.vx * delta_time.asSeconds();
+    }
+
     // Tag PlayerMissile
     if(tag.tag == "PlayerMissile")
     {

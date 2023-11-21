@@ -80,6 +80,7 @@ set(SOURCE_FILES
     src/space-shooter/ecs/systems/victory_system.cpp
     src/space-shooter/ecs/systems/scene_victory_system.cpp
     src/space-shooter/ecs/systems/clean_sounds_system.cpp
+    src/space-shooter/ecs/systems/enemy_chasing_system.cpp
     # Components
     src/space-shooter/ecs/components/texture_component.cpp
     src/space-shooter/ecs/components/position_component.cpp
