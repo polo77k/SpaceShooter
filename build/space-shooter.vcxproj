@@ -340,6 +340,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="C:\Users\polo7\Documents\ESIEE\E4\Cours E4\Programation C++\Projet\squeleton\squeleton\src\space-shooter\ecs\entites\score_display.cpp" />
     <ClCompile Include="C:\Users\polo7\Documents\ESIEE\E4\Cours E4\Programation C++\Projet\squeleton\squeleton\src\space-shooter\ecs\entites\background_music.cpp" />
     <ClCompile Include="C:\Users\polo7\Documents\ESIEE\E4\Cours E4\Programation C++\Projet\squeleton\squeleton\src\space-shooter\ecs\entites\scene_victory.cpp" />
+    <ClCompile Include="C:\Users\polo7\Documents\ESIEE\E4\Cours E4\Programation C++\Projet\squeleton\squeleton\src\space-shooter\ecs\entites\sound_effects.cpp" />
     <ClCompile Include="C:\Users\polo7\Documents\ESIEE\E4\Cours E4\Programation C++\Projet\squeleton\squeleton\src\space-shooter\ecs\systems\input_system.cpp" />
     <ClCompile Include="C:\Users\polo7\Documents\ESIEE\E4\Cours E4\Programation C++\Projet\squeleton\squeleton\src\space-shooter\ecs\systems\rendering_system.cpp" />
     <ClCompile Include="C:\Users\polo7\Documents\ESIEE\E4\Cours E4\Programation C++\Projet\squeleton\squeleton\src\space-shooter\ecs\systems\movement_system.cpp" />
@@ -361,6 +362,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="C:\Users\polo7\Documents\ESIEE\E4\Cours E4\Programation C++\Projet\squeleton\squeleton\src\space-shooter\ecs\systems\movement_spawner_system.cpp" />
     <ClCompile Include="C:\Users\polo7\Documents\ESIEE\E4\Cours E4\Programation C++\Projet\squeleton\squeleton\src\space-shooter\ecs\systems\victory_system.cpp" />
     <ClCompile Include="C:\Users\polo7\Documents\ESIEE\E4\Cours E4\Programation C++\Projet\squeleton\squeleton\src\space-shooter\ecs\systems\scene_victory_system.cpp" />
+    <ClCompile Include="C:\Users\polo7\Documents\ESIEE\E4\Cours E4\Programation C++\Projet\squeleton\squeleton\src\space-shooter\ecs\systems\clean_sounds_system.cpp" />
     <ClCompile Include="C:\Users\polo7\Documents\ESIEE\E4\Cours E4\Programation C++\Projet\squeleton\squeleton\src\space-shooter\ecs\components\texture_component.cpp" />
     <ClCompile Include="C:\Users\polo7\Documents\ESIEE\E4\Cours E4\Programation C++\Projet\squeleton\squeleton\src\space-shooter\ecs\components\position_component.cpp" />
     <ClCompile Include="C:\Users\polo7\Documents\ESIEE\E4\Cours E4\Programation C++\Projet\squeleton\squeleton\src\space-shooter\ecs\components\sprite_component.cpp" />

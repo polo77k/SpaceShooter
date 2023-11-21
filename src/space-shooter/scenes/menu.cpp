@@ -19,7 +19,7 @@ void menuGame(ecs::Manager& manager)
 
     // BackgroundMusic
     auto musicPath = manager.gameState().config.path_to_audio / "musique_menu.wav";
-    manager.registerEntity<space_shooter::ecs::BackgroundMusicEntity>(musicPath);
+    manager.registerEntity<space_shooter::ecs::BackgroundMusicEntity>(musicPath, 50.0f);
 
     // MusicSystem
     manager.registerSystem<space_shooter::ecs::MusicSystem>();

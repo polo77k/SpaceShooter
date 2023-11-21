@@ -13,3 +13,4 @@
 #include <space-shooter/ecs/entities/score_display.hpp>
 #include <space-shooter/ecs/entities/background_music.hpp>
 #include <space-shooter/ecs/entities/scene_victory.hpp>
+#include <space-shooter/ecs/entities/sound_effects.hpp>

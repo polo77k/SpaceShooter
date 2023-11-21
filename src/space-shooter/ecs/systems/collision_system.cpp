@@ -1,5 +1,7 @@
 #include <space-shooter/ecs/systems/collision_system.hpp>
 
+#include <space-shooter/ecs/entities/sound_effects.hpp>
+
 #include <space-shooter/ecs/components/position_component.hpp>
 #include <space-shooter/ecs/components/tag_component.hpp>
 #include <space-shooter/ecs/components/health_component.hpp>
@@ -54,6 +56,18 @@ void CollisionSystem::update(const sf::Time &delta_time,
                 {
                     // Damage
                     health.health -= damage.damage;
+
+                    // SoundEffects
+                    if(tag1.tag == "PlayerShip")
+                    {
+                        auto soundPath = manager.gameState().config.path_to_audio / "degat_vaisseau.wav";
+                        manager.registerEntity<space_shooter::ecs::SoundEffetsEntity>(soundPath, 40.0f);
+                    }
+                    if(tag1.tag == "EnemyShip" || tag1.tag == "EnemySpawner")
+                    {
+                        auto soundPath2 = manager.gameState().config.path_to_audio / "degat_enemy.wav";
+                        manager.registerEntity<space_shooter::ecs::SoundEffetsEntity>(soundPath2, 40.0f);
+                    }
 
                     // Kill Missile
                     e2->kill();

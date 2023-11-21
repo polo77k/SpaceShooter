@@ -6,8 +6,8 @@
 
 namespace space_shooter::ecs {
 
-BackgroundMusicEntity::BackgroundMusicEntity(const std::filesystem::path &audio_path) {
-  add<MusicComponent>(audio_path, 50.0f);
+BackgroundMusicEntity::BackgroundMusicEntity(const std::filesystem::path &audio_path, const float volume) {
+  add<MusicComponent>(audio_path, volume);
 }
 
 } // namespace space_shooter::ecs

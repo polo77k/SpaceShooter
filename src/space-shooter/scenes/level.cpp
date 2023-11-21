@@ -30,7 +30,7 @@ void initLevel(ecs::Manager &manager) {
 
   // BackgroundMusic
   auto musicPath = manager.gameState().config.path_to_audio / "music_fight.wav";
-  manager.registerEntity<space_shooter::ecs::BackgroundMusicEntity>(musicPath);
+  manager.registerEntity<space_shooter::ecs::BackgroundMusicEntity>(musicPath, 30.0f);
 
   // MusicSystem
   manager.registerSystem<space_shooter::ecs::MusicSystem>();
@@ -81,6 +81,12 @@ void initLevel(ecs::Manager &manager) {
 
   // ScoreDisplay
   manager.registerEntity<space_shooter::ecs::ScoreDisplayEntity>(font_path);
+
+  // AudioSystem
+  manager.registerSystem<space_shooter::ecs::AudioSystem>();
+
+  // CleanSoundsSystem
+  manager.registerSystem<space_shooter::ecs::CleanSoundsSystem>();
 
   // VictorySystem
   manager.registerSystem<space_shooter::ecs::VictorySystem>();

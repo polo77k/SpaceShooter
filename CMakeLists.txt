@@ -56,6 +56,7 @@ set(SOURCE_FILES
     src/space-shooter/ecs/entites/score_display.cpp
     src/space-shooter/ecs/entites/background_music.cpp
     src/space-shooter/ecs/entites/scene_victory.cpp
+    src/space-shooter/ecs/entites/sound_effects.cpp
     # Systems
     src/space-shooter/ecs/systems/input_system.cpp
     src/space-shooter/ecs/systems/rendering_system.cpp
@@ -78,6 +79,7 @@ set(SOURCE_FILES
     src/space-shooter/ecs/systems/movement_spawner_system.cpp
     src/space-shooter/ecs/systems/victory_system.cpp
     src/space-shooter/ecs/systems/scene_victory_system.cpp
+    src/space-shooter/ecs/systems/clean_sounds_system.cpp
     # Components
     src/space-shooter/ecs/components/texture_component.cpp
     src/space-shooter/ecs/components/position_component.cpp

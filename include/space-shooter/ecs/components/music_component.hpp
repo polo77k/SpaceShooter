@@ -14,7 +14,7 @@ struct MusicComponent : Component {
   bool jouer;
   sf::Music sound;
 
-  MusicComponent(const std::filesystem::path audio_path, const float volume, bool jouer = false);
+  MusicComponent(const std::filesystem::path &audio_path, const float volume, bool jouer = false);
   MusicComponent() = delete;
 };
 

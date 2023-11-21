@@ -18,29 +18,26 @@ AudioSystem::AudioSystem()
 
 void AudioSystem::update(const sf::Time &delta_time,
                             std::vector<Entity *> &entities, Manager &manager) {
-
+  
   for (auto e : entities) {
     assert(hasRequiredComponents(*e));
 
     auto &audio = e->get<AudioComponent>();
 
-    if(audio.playAudio)
+    if(!audio.playAudio)
     {
-        sf::SoundBuffer soundBuffer;
-        sf::Sound sound;
-
-        if(soundBuffer.loadFromFile(audio.audio_path.string()))
+        if(audio.soundBuffer.loadFromFile(audio.audio_path.string()))
         {
-            sf::Sound sound(soundBuffer);
-            sound.setVolume(audio.volume);
-            sound.play();
+            audio.sound = sf::Sound(audio.soundBuffer);
+            audio.sound.setVolume(audio.volume);
+            audio.sound.play();
         }
         else
         {
             std::cerr << "Probleme audio : " << audio.audio_path.string() << std::endl;
         }
 
-        audio.playAudio = false;
+        audio.playAudio = true;
     }
   }
 }

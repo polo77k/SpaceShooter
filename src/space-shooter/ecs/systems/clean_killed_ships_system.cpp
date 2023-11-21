@@ -1,5 +1,7 @@
 #include <space-shooter/ecs/systems/clean_killed_ships_system.hpp>
 
+#include <space-shooter/ecs/entities/sound_effects.hpp>
+
 #include <space-shooter/ecs/components/health_component.hpp>
 #include <space-shooter/ecs/components/tag_component.hpp>
 #include <space-shooter/ecs/components/score_component.hpp>
@@ -38,6 +40,20 @@ void CleanKilledShipsSystem::update(const sf::Time &delta_time,
           score.score += 100;
         });
       }
+      else if(tag.tag == "EnemySpawner")
+      { 
+        // Permet d'ajouter 500 points par kill
+        manager.sendToEntity<ScoreDisplayEntity>([&](auto &scoreDisp)
+        {
+          auto &score = scoreDisp.get<ScoreComponent>();
+          score.score += 500;
+        });
+      }
+
+      // SoundEffects
+      auto soundPath = manager.gameState().config.path_to_audio / "enemy_dead.wav";
+      manager.registerEntity<space_shooter::ecs::SoundEffetsEntity>(soundPath, 40.0f);
+
       e->kill();
     }
     

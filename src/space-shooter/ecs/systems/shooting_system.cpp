@@ -2,6 +2,8 @@
 
 #include <space-shooter/ecs/entities/player_missile.hpp>
 #include <space-shooter/ecs/entities/enemy_missile.hpp>
+#include <space-shooter/ecs/entities/sound_effects.hpp>
+
 #include <space-shooter/ecs/components/input_component.hpp>
 #include <space-shooter/ecs/components/position_component.hpp>
 #include <space-shooter/ecs/components/tag_component.hpp>
@@ -43,6 +45,10 @@ void ShootingSystem::update(const sf::Time &delta_time,
             auto imagePath = manager.gameState().config.path_to_textures / "PlayerMissile.png";
             manager.registerEntity<space_shooter::ecs::PlayerMissileEntity>(initialPosition, imagePath, initialVelocite);
 
+            // new SoundEffect
+            auto soundPath = manager.gameState().config.path_to_audio / "missile_vaisseau.wav";
+            manager.registerEntity<space_shooter::ecs::SoundEffetsEntity>(soundPath, 20.0f);
+
             // reset cooldown
             clock.clock = sf::Time::Zero;
         }
@@ -58,6 +64,10 @@ void ShootingSystem::update(const sf::Time &delta_time,
             sf::Vector2f velociteEnemy(150.0f, 150.0f);
             auto imageMissile = manager.gameState().config.path_to_textures / "EnemyMissile.png";
             manager.registerEntity<space_shooter::ecs::EnemyMissileEntity>(positionEnemy, imageMissile, velociteEnemy);
+
+            // new SoundEffect
+            auto soundPath2 = manager.gameState().config.path_to_audio / "missile_enemy.wav";
+            manager.registerEntity<space_shooter::ecs::SoundEffetsEntity>(soundPath2, 70.0f);
 
             // reset cooldown
             clock.clock = sf::Time::Zero;

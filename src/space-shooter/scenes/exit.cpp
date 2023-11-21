@@ -15,7 +15,7 @@ namespace space_shooter
     
     // BackgroundMusic
     auto musicPath = manager.gameState().config.path_to_audio / "game_over.wav";
-    manager.registerEntity<space_shooter::ecs::BackgroundMusicEntity>(musicPath);
+    manager.registerEntity<space_shooter::ecs::BackgroundMusicEntity>(musicPath, 50.0f);
 
     // SceneExit
     auto font_path = manager.gameState().config.path_to_fonts / "Roboto-BoldCondensed.ttf";

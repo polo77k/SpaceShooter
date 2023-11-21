@@ -21,3 +21,4 @@
 #include <space-shooter/ecs/systems/movement_spawner_system.hpp>
 #include <space-shooter/ecs/systems/victory_system.hpp>
 #include <space-shooter/ecs/systems/scene_victory_system.hpp>
+#include <space-shooter/ecs/systems/clean_sounds_system.hpp>

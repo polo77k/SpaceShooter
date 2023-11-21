@@ -9,7 +9,7 @@ namespace space_shooter::ecs {
 
 class BackgroundMusicEntity : public Entity {
 public:
-  BackgroundMusicEntity(const std::filesystem::path &audio_path);
+  BackgroundMusicEntity(const std::filesystem::path &audio_path, const float volume);
   BackgroundMusicEntity() = delete;
 
   using Entity::Entity;
