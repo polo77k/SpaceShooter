@@ -12,7 +12,7 @@ namespace space_shooter::ecs {
 
 class EnemySpawnerEntity : public Entity {
 public:
-  EnemySpawnerEntity(sf::Vector2f pos, const std::filesystem::path &texture_path);
+  EnemySpawnerEntity(sf::Vector2f pos, const std::filesystem::path &texture_path, sf::Vector2f velocity);
   
   EnemySpawnerEntity() = delete;
 

@@ -18,9 +18,10 @@ void initLevel(ecs::Manager &manager) {
   manager.registerEntity<space_shooter::ecs::PlayerShipEntity>(initialPosition, imagePath, initialVelocite);
 
   // EnemySpawner
-  sf::Vector2f initialEnemy(manager.gameState().width/2.0f - 60.0f, 20.0f);
+  sf::Vector2f positionEnemy(90.0f, 20.0f);
+  sf::Vector2f velociteEnemy(100.0f, 0.0f);
   auto imageEnemy = manager.gameState().config.path_to_textures / "EnemySpawner.png";
-  manager.registerEntity<space_shooter::ecs::EnemySpawnerEntity>(initialEnemy, imageEnemy);
+  manager.registerEntity<space_shooter::ecs::EnemySpawnerEntity>(positionEnemy, imageEnemy, velociteEnemy);
 
   // PlayerShipHealthBar
   sf::Vector2f initialBar(0.0f, 0.0f);
@@ -36,6 +37,9 @@ void initLevel(ecs::Manager &manager) {
 
   // EnemySystem
   manager.registerSystem<space_shooter::ecs::EnemySpawnerSystem>();
+
+  // MovementSpawnerSystem
+  manager.registerSystem<space_shooter::ecs::MovementSpawnerSystem>();
 
   // RenderSystem
   manager.registerSystem<space_shooter::ecs::RenderingSystem>();

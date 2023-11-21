@@ -73,6 +73,7 @@ set(SOURCE_FILES
     src/space-shooter/ecs/systems/scoring_system.cpp
     src/space-shooter/ecs/systems/audio_system.cpp
     src/space-shooter/ecs/systems/music_system.cpp
+    src/space-shooter/ecs/systems/movement_spawner_system.cpp
     # Components
     src/space-shooter/ecs/components/texture_component.cpp
     src/space-shooter/ecs/components/position_component.cpp
