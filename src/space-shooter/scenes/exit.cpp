@@ -17,6 +17,11 @@ namespace space_shooter
     auto musicPath = manager.gameState().config.path_to_audio / "game_over.wav";
     manager.registerEntity<space_shooter::ecs::BackgroundMusicEntity>(musicPath);
 
+    // SceneExit
+    auto font_path = manager.gameState().config.path_to_fonts / "Roboto-BoldCondensed.ttf";
+    std::string texte = "Retour vers le menu dans \nquelques secondes...";
+    manager.registerEntity<space_shooter::ecs::SceneExit>(texte, font_path);
+
     // MusicSystem
     manager.registerSystem<space_shooter::ecs::MusicSystem>();
 
@@ -28,6 +33,9 @@ namespace space_shooter
     
     // ClockSystem
     manager.registerSystem<space_shooter::ecs::ClockSystem>();
+    
+    // TextRenderingSysteme
+    manager.registerSystem<space_shooter::ecs::TextRenderingSystem>();
 
     // SceneExitSystem
     manager.registerSystem<space_shooter::ecs::SceneExitSystem>();

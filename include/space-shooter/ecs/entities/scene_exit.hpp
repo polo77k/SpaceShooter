@@ -10,7 +10,7 @@ namespace space_shooter::ecs {
 
 class SceneExit : public Entity {
 public:
-  SceneExit(const sf::Font& font, const std::string& texte);
+  SceneExit(const std::string& text, const std::filesystem::path &font_path);
   
   SceneExit();
 

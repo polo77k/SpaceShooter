@@ -15,7 +15,7 @@ SceneMenu::SceneMenu(const std::string& text, const std::filesystem::path &font_
   add<TextBlinkComponent>();
 
   sf::Vector2f pos(50.0f, 200.0f);
-  sf::Color color(255, 0, 0);
+  sf::Color color(255, 0, 25);
   add<TextComponent>(text, font_path, 45, pos, color);
 }
 

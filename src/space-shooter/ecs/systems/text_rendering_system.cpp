@@ -27,9 +27,7 @@ void TextRenderingSystem::update(const sf::Time &delta_time,
     auto &text = e->get<TextComponent>();
     const auto &tag = e->get<TagComponent>();
 
-    sf::Text textDisplay;
-    textDisplay.setString(text.text);
-    
+    sf::Text textDisplay;    
 
     if(!text.loaded)
     {
@@ -44,6 +42,12 @@ void TextRenderingSystem::update(const sf::Time &delta_time,
     }
 
 
+    // Tag Texte
+    if(tag.tag == "Texte")
+    {
+        textDisplay.setString(text.text);
+    }
+
     // Tag Timer -> get Timer
     if(tag.tag == "Timer")
     {
@@ -52,6 +56,7 @@ void TextRenderingSystem::update(const sf::Time &delta_time,
         textDisplay.setString("Timer : " + t);
     }
 
+    // Tag Score -> get Score
     if(tag.tag == "Score")
     {
         const auto &score = e->get<ScoreComponent>();
