@@ -18,6 +18,13 @@ namespace space_shooter
     std::string texte = "Regles du jeu :\nVous devez detruire tout les vaisseaux\nennemies, ainsi que le vaisseau mere\npour gagner.\n\nTouches :\nFleches directionnelles pour se deplacer.\nEspace pour tirer.\n\n\n\n\n\n\nEchap pour retourner au Menu.";
     manager.registerEntity<space_shooter::ecs::SceneRules>(texte, font_path);
 
+    // BackgroundMusic
+    auto musicPath = manager.gameState().config.path_to_audio / "music_rules.wav";
+    manager.registerEntity<space_shooter::ecs::BackgroundMusicEntity>(musicPath, 50.0f);
+
+    // MusicSystem
+    manager.registerSystem<space_shooter::ecs::MusicSystem>();
+
     // RenderSystem
     manager.registerSystem<space_shooter::ecs::RenderingSystem>();
 
