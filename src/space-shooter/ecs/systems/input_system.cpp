@@ -56,6 +56,10 @@ void InputSystem::update(const sf::Time &delta_time,
     {
       input.enter = true;
     }
+    if(sf::Keyboard::isKeyPressed(sf::Keyboard::R))
+    {
+      input.rules = true;
+    }
   }
 }
 

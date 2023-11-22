@@ -23,3 +23,4 @@
 #include <space-shooter/ecs/systems/scene_victory_system.hpp>
 #include <space-shooter/ecs/systems/clean_sounds_system.hpp>
 #include <space-shooter/ecs/systems/enemy_chasing_system.hpp>
+#include <space-shooter/ecs/systems/scene_rules_system.hpp>

@@ -114,6 +114,9 @@ void Manager::triggerSceneChange() {
   case GameState::Scene::Victory:
     victoryScene(*this);
     break;
+  case GameState::Scene::Rules:
+    rulesMenu(*this);
+    break;
   case GameState::Scene::Exit:
     exitGame(*this);
     break;

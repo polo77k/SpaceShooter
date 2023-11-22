@@ -21,18 +21,21 @@ void SceneMenuSystem::update(const sf::Time &delta_time,
   for (auto e : entities) {
     assert(hasRequiredComponents(*e));
 
-    auto &input = e->get<InputComponent>();
+    const auto &input = e->get<InputComponent>();
 
     // detect keypressed to change scene
     if(input.enter)
     {
       manager.gameState().switch_to_scene = GameState::Scene::Level;
     }
+    if(input.rules)
+    {
+      manager.gameState().switch_to_scene = GameState::Scene::Rules;
+    }
     if(input.escape)
     {
       manager.gameState().running = false; // stop the game
     }
-    
   }
 }
 

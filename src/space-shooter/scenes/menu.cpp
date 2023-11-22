@@ -14,7 +14,7 @@ void menuGame(ecs::Manager& manager)
 
     // SceneMenu
     auto font_path = manager.gameState().config.path_to_fonts / "Roboto-BoldCondensed.ttf";
-    std::string texte = "Appuyez sur Entree pour commencer la partie\n\nEchap pour quitter le jeu";
+    std::string texte = "Appuyez sur Entree pour commencer la partie\n\nR pour acceder aux regles\n\nEchap pour quitter le jeu";
     manager.registerEntity<space_shooter::ecs::SceneMenu>(texte, font_path);
 
     // BackgroundMusic

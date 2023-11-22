@@ -22,6 +22,9 @@
     <ClCompile Include="C:\Users\polo7\Documents\ESIEE\E4\Cours E4\Programation C++\Projet\squeleton\squeleton\src\space-shooter\scenes\victory.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C:\Users\polo7\Documents\ESIEE\E4\Cours E4\Programation C++\Projet\squeleton\squeleton\src\space-shooter\scenes\rules.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="C:\Users\polo7\Documents\ESIEE\E4\Cours E4\Programation C++\Projet\squeleton\squeleton\src\space-shooter\ecs\entity.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -71,6 +74,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="C:\Users\polo7\Documents\ESIEE\E4\Cours E4\Programation C++\Projet\squeleton\squeleton\src\space-shooter\ecs\entites\sound_effects.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\polo7\Documents\ESIEE\E4\Cours E4\Programation C++\Projet\squeleton\squeleton\src\space-shooter\ecs\entites\scene_rules.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="C:\Users\polo7\Documents\ESIEE\E4\Cours E4\Programation C++\Projet\squeleton\squeleton\src\space-shooter\ecs\systems\input_system.cpp">
@@ -140,6 +146,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="C:\Users\polo7\Documents\ESIEE\E4\Cours E4\Programation C++\Projet\squeleton\squeleton\src\space-shooter\ecs\systems\enemy_chasing_system.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\polo7\Documents\ESIEE\E4\Cours E4\Programation C++\Projet\squeleton\squeleton\src\space-shooter\ecs\systems\scene_rules_system.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="C:\Users\polo7\Documents\ESIEE\E4\Cours E4\Programation C++\Projet\squeleton\squeleton\src\space-shooter\ecs\components\texture_component.cpp">
