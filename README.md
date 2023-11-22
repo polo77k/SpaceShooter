@@ -18,8 +18,8 @@ RenderingSystem : Un système de rendu des textures et des sprites pour les affi
 Background Image : Défini l'ambiance du jeu en affichant une image d'arrière-plan.  
 InputSystem : Permet d'avoir des touches pour jouer.  
 MovementSystem : Permet de déplacer les entités, notamment notre vaisseau et ceux des ennemis, ainsi que les missiles.  
-SceneSystem : Un système de transition entre les différentes scènes de jeu, plusieurs sceneSystem ont été créé pour chaque scène.
-TagComponent : Classifie les entités à l'aide de Tag pour une meilleure gestion dans divers systèmes.
-ShootingSystem : Permet au joueur, ainsi qu'aux ennemis de tirer des missiles.
-Cooldown Missile : Permet d'avoir un delay entre les missiles, grâce à un ClockSystem.
-Enemy Spawner : Un vaisseau mère, qui produit des vaisseaux ennemis tant qu'il est en vie.
+__SceneSystem__ : Un système de transition entre les différentes scènes de jeu, plusieurs sceneSystem ont été créé pour chaque scène.  
+__TagComponent__ : Classifie les entités à l'aide de Tag pour une meilleure gestion dans divers systèmes.  
+__ShootingSystem + EnemyShootingSystem__ : Permet au joueur, ainsi qu'aux ennemis de tirer des missiles.  
+Cooldown Missile : Permet d'avoir un delay entre les missiles, grâce à un ClockSystem.  
+Enemy Spawner : Un vaisseau mère, qui produit des vaisseaux ennemis à interval régulier, tant qu'il est en vie.  
