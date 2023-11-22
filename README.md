@@ -10,16 +10,43 @@ Attention ! Le temps vous est compté pour réaliser cette tâche, le chrono tou
 
 ### Fonctionnalités implémentées
 
-Ce jeu comporte de nombreuses fonctionnalités. Vous pourrez trouver différentes scènes pour parcourir le jeu, comme une scène Menu, Rules, Level, Exit et Victory.
+Ce jeu comporte de nombreuses fonctionnalités. Vous pourrez trouver différentes scènes pour parcourir le jeu, comme une scène Menu, Rules, Level, GameOver et Victory.
 
 Les autres systèmes présents sont :
 
-RenderingSystem : Un système de rendu des textures et des sprites pour les afficher à l'écran, comme le background et les vaisseaux.  
-Background Image : Défini l'ambiance du jeu en affichant une image d'arrière-plan.  
-InputSystem : Permet d'avoir des touches pour jouer.  
-MovementSystem : Permet de déplacer les entités, notamment notre vaisseau et ceux des ennemis, ainsi que les missiles.  
+__RenderingSystem__ : Un système de rendu des textures et des sprites pour les afficher à l'écran, comme le background et les vaisseaux.  
+__Background Image__ : Défini l'ambiance du jeu en affichant une image d'arrière-plan.  
+__InputSystem__ : Permet d'avoir des touches pour jouer.  
+__MovementSystem__ : Permet de déplacer les entités, notamment notre vaisseau et ceux des ennemis, ainsi que les missiles.  
 __SceneSystem__ : Un système de transition entre les différentes scènes de jeu, plusieurs sceneSystem ont été créé pour chaque scène.  
 __TagComponent__ : Classifie les entités à l'aide de Tag pour une meilleure gestion dans divers systèmes.  
 __ShootingSystem + EnemyShootingSystem__ : Permet au joueur, ainsi qu'aux ennemis de tirer des missiles.  
-Cooldown Missile : Permet d'avoir un delay entre les missiles, grâce à un ClockSystem.  
-Enemy Spawner : Un vaisseau mère, qui produit des vaisseaux ennemis à interval régulier, tant qu'il est en vie.  
+__Cooldown Missile__ : Permet d'avoir un delay entre les missiles, grâce à un ClockSystem.  
+__Enemy Spawner__ : Un vaisseau mère, qui produit des vaisseaux ennemis à interval régulier, tant qu'il est en vie.  
+__CollisionSystem + Health/Damage__ : Mécanisme dans lequel les missiles et les vaisseaux entrent en collision (format AABB), causant des dégâts.  
+__Clean Killed Ship__ : Système qui détecte les vaisseaux sans vie, et les détruits.  
+__Clean Missile__ : Système qui détruit les missiles une fois les bordures de l'écran franchi.  
+__EnemyChasingSystem__ : Les navires ennemis suivent uniquement le joueur sur l'axe des x, pour une difficulté raisonnable.  
+__EnemySpawnerSystem__ : Le vaisseau mère ennemi bouge sur l'axe des x, pour ajouter de la difficulté au joueur.  
+__Player Death Detection__ : Un système qui passe à la scène de GameOver quand le joueur est mort.  
+__VictorySystem__ : Permet de gagner la partie, si tout les ennemis et le vaisseau mère sont détruits.  
+__Health Bar__ : Ajout d'un bar de vie du joueur à l'écran, pour connaitre l'étendu des dégâts du vaisseau.  
+__Timer__ : Ajout un timer, qui oblige le joueur à gagner la partie avant la fin du temps.  
+__Text Rendering System__ : Système permettant d'afficher un texte à l'écran, comme le timer, ou les règles dans la scène Rules.  
+__Text Blink System__ : Système permettant de faire clignoter un texte.  
+__Scoring Mechanism__ : Mécanisme permettant d'avoir un score en tuant les ennemis.  
+__Music System__ : Ajout de musique pour les backgrounds.  
+__Audio System__ : Ajout de différents bruits, par exemple pour les missiles et les vaisseaux détruits.  
+__Clean Sounds__ : Permet de détruire les sons une fois qu'ils ont été joué.  
+
+Toutes les fonctionnalités proposées pour notre projet ont été réalisé, sauf celle pour mettre le jeu en pause.
+
+### Bugs et Problèmes
+
+Il arrive que le vaisseau mère se bloque sur un côté pour une raison inconnue.  
+Nous avons eu également des bugs de son, quand il y avait trop de missiles créé. L'ajout de la fonctionnalité Clean Sounds à permit de resoudre le problème.
+
+
+### Commandes
+
+Pour jouer au jeu, vous pouvez vous déplacer à l'aide des touches directionnelles du clavier, et la touche Espace permet de tirer les missiles.

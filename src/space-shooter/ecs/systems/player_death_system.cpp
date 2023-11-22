@@ -28,7 +28,7 @@ void PlayerDeathSystem::update(const sf::Time &delta_time,
     // Detect keypressed to change scene
     if(tag.tag == "PlayerShip" && health.health <= 0.0f)
     {
-      manager.gameState().switch_to_scene = GameState::Scene::Exit;
+      manager.gameState().switch_to_scene = GameState::Scene::GameOver;
     }
   }
 }

@@ -34,7 +34,7 @@ set(SOURCE_FILES
     src/space-shooter/main.cpp
     src/space-shooter/utils.cpp
     src/space-shooter/game_state.cpp
-    src/space-shooter/scenes/exit.cpp
+    src/space-shooter/scenes/gameover.cpp
     src/space-shooter/scenes/level.cpp
     src/space-shooter/scenes/menu.cpp
     src/space-shooter/scenes/victory.cpp

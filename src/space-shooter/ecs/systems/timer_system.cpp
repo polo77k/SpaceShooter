@@ -26,7 +26,7 @@ void TimerSystem::update(const sf::Time &delta_time,
 
     if(timer.time <= sf::Time::Zero)
     {
-        manager.gameState().switch_to_scene = GameState::Scene::Exit;
+        manager.gameState().switch_to_scene = GameState::Scene::GameOver;
     }
   }
 }
