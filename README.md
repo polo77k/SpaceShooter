@@ -4,7 +4,7 @@
 
 Ce jeu est un space shooter, réaliser par Paul Kehlhoffner et Aymeric Martin.
 
-Le joueur possède se retrouve dans l'espace avec son vaisseau spacial, et doit détruire le vaisseau mère sur sa route. Malheureusement, ce vaisseau mère appelle des vaisseaux ennemis pour se protéger, et vous attaquer en même temps. Votre but est donc de détruire tous les vaisseaux ennemis pour pouvoir gagner la partie.
+Le joueur se retrouve dans l'espace avec son vaisseau spatial, et doit détruire le vaisseau mère sur sa route. Malheureusement, ce vaisseau mère appelle des vaisseaux ennemis pour se protéger, et vous attaquer en même temps. Votre but est donc de détruire tous les vaisseaux ennemis pour pouvoir gagner la partie.
 
 Attention ! Le temps vous est compté pour réaliser cette tâche, le chrono tourne....
 
@@ -22,15 +22,15 @@ __SceneSystem__ : Un système de transition entre les différentes scènes de je
 __TagComponent__ : Classifie les entités à l'aide de Tag pour une meilleure gestion dans divers systèmes.  
 __ShootingSystem + EnemyShootingSystem__ : Permet au joueur, ainsi qu'aux ennemis de tirer des missiles.  
 __Cooldown Missile__ : Permet d'avoir un delay entre les missiles, grâce à un ClockSystem.  
-__Enemy Spawner__ : Un vaisseau mère, qui produit des vaisseaux ennemis à interval régulier, tant qu'il est en vie.  
+__Enemy Spawner__ : Un vaisseau mère, qui produit des vaisseaux ennemis à intervalle régulier, tant qu'il est en vie.  
 __CollisionSystem + Health/Damage__ : Mécanisme dans lequel les missiles et les vaisseaux entrent en collision (format AABB), causant des dégâts.  
 __Clean Killed Ship__ : Système qui détecte les vaisseaux sans vie, et les détruits.  
 __Clean Missile__ : Système qui détruit les missiles une fois les bordures de l'écran franchi.  
 __EnemyChasingSystem__ : Les navires ennemis suivent uniquement le joueur sur l'axe des x, pour une difficulté raisonnable.  
 __EnemySpawnerSystem__ : Le vaisseau mère ennemi bouge sur l'axe des x, pour ajouter de la difficulté au joueur.  
 __Player Death Detection__ : Un système qui passe à la scène de GameOver quand le joueur est mort.  
-__VictorySystem__ : Permet de gagner la partie, si tout les ennemis et le vaisseau mère sont détruits.  
-__Health Bar__ : Ajout d'un bar de vie du joueur à l'écran, pour connaitre l'étendu des dégâts du vaisseau.  
+__VictorySystem__ : Permet de gagner la partie, si tous les ennemis et le vaisseau mère sont détruits.  
+__Health Bar__ : Ajout d'un bar de vie du joueur à l'écran, pour connaitre l'étendue des dégâts du vaisseau.  
 __Timer__ : Ajout un timer, qui oblige le joueur à gagner la partie avant la fin du temps.  
 __Text Rendering System__ : Système permettant d'afficher un texte à l'écran, comme le timer, ou les règles dans la scène Rules.  
 __Text Blink System__ : Système permettant de faire clignoter un texte.  
@@ -43,9 +43,8 @@ Toutes les fonctionnalités proposées pour notre projet ont été réalisé, sa
 
 ### Bugs et Problèmes
 
-Il arrive que le vaisseau mère se bloque sur un côté pour une raison inconnue.  
-Nous avons eu également des bugs de son, quand il y avait trop de missiles créé. L'ajout de la fonctionnalité Clean Sounds à permit de resoudre le problème.
-
+Il arrive que le vaisseau mère se bloque sur un des côtés pour une raison inconnue.  
+Nous avons eu également des bugs de son, quand il y avait trop de missiles créés. L'ajout de la fonctionnalité Clean Sounds à permit de résoudre le problème.
 
 ### Commandes
 
