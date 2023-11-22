@@ -15,7 +15,7 @@ namespace space_shooter
 
     // SceneVictory
     auto font_path = manager.gameState().config.path_to_fonts / "Roboto-BoldCondensed.ttf";
-    std::string texte = "Regles du jeu :\nVous devez detruire tout les vaisseaux\nennemies, ainsi que le vaisseau mere\npour gagner.\n\nTouches :\nFleches directionnelles pour se deplacer.\nEspace pour tirer.\n\n\n\n\n\n\nEchap pour retourner au Menu.";
+    std::string texte = "Regles du jeu :\nVous devez detruire tous les vaisseaux\nennemis, ainsi que le vaisseau mere\npour gagner.\n\nTouches :\nFleches directionnelles pour se deplacer.\nEspace pour tirer.\n\n\n\n\n\n\nEchap pour retourner au Menu.";
     manager.registerEntity<space_shooter::ecs::SceneRules>(texte, font_path);
 
     // BackgroundMusic

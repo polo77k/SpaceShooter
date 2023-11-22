@@ -24,6 +24,7 @@ void TextBlinkSystem::update(const sf::Time &delta_time,
     auto &textBlink = e->get<TextBlinkComponent>();
     auto &text = e->get<TextComponent>();
 
+    // Permet de switch entre un texte visible et non visible
     textBlink.blinkTime -= delta_time;
     if(textBlink.blinkTime <= sf::Time::Zero)
     {
@@ -31,6 +32,7 @@ void TextBlinkSystem::update(const sf::Time &delta_time,
         textBlink.blinkTime = sf::seconds(0.5f);
     }
 
+    // Affiche le texte uniquement quand cela est permit
     if(textBlink.isVisible)
     {    
         sf::Text textDisplay;

@@ -42,7 +42,7 @@ void CollisionSystem::update(const sf::Time &delta_time,
 
             const auto &pos2 = e2->get<PositionComponent>();
             const auto &tag2 = e2->get<TagComponent>();
-            auto &damage = e2->get<DamageComponent>();
+            const auto &damage = e2->get<DamageComponent>();
             const auto &sprite2 = e2->get<SpriteComponent>();
 
             // Tag PlayerMissile || EnemyMissile

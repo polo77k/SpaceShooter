@@ -70,7 +70,8 @@ set(SOURCE_FILES
     src/space-shooter/ecs/systems/enemy_spawner_system.cpp
     src/space-shooter/ecs/systems/collision_system.cpp
     src/space-shooter/ecs/systems/clean_killed_ships_system.cpp
-    src/space-shooter/ecs/systems/scene_level_system.cpp
+    src/space-shooter/ecs/systems/clean_missiles_system.cpp
+    src/space-shooter/ecs/systems/player_death_system.cpp
     src/space-shooter/ecs/systems/scene_exit_system.cpp
     src/space-shooter/ecs/systems/health_bar_display_system.cpp
     src/space-shooter/ecs/systems/timer_system.cpp

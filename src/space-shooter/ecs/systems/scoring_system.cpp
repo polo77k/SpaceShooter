@@ -21,6 +21,8 @@ void ScoringSystem::update(const sf::Time &delta_time,
   for (auto e : entities) {
     assert(hasRequiredComponents(*e));
 
+    // Le score augmente depuis le systeme clean_killed_ship_system, quand les ennemis sont detruits.
+    // Ce systeme permet de rajouter d'autres manière d'optenir des points.
     
   }
 }

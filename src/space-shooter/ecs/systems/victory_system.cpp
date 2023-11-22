@@ -28,10 +28,10 @@ void VictorySystem::update(const sf::Time &delta_time,
 
     if(tag.tag == "EnemyShip" || tag.tag == "EnemySpawner")
     {
-        if(e->isAlive())
-        {
-            victory = false;
-        }
+      if(e->isAlive())
+      {
+        victory = false; // Si un seul ennemi est encore en vie, alors pas de victoire
+      }
     }
   }
 

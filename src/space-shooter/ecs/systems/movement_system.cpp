@@ -66,26 +66,13 @@ void MovementSystem::update(const sf::Time &delta_time,
     if(tag.tag == "PlayerMissile")
     {
       pos.y -= vel.vy * delta_time.asSeconds();
-
-      // Kill PlayerMissile
-      if(pos.y < -25.0f)
-      {
-        e->kill();
-      }
     }
 
     // Tag EnemyMissile
     if(tag.tag == "EnemyMissile")
     {
       pos.y += vel.vy * delta_time.asSeconds();
-
-      // Kill EnemyMissile
-      if(pos.y > manager.gameState().height - 25.0f)
-      {
-        e->kill();
-      }
     }
-
   }
 }
 

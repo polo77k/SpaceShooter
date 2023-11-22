@@ -62,8 +62,11 @@ void initLevel(ecs::Manager &manager) {
   // CleanKilledShipsSystem
   manager.registerSystem<space_shooter::ecs::CleanKilledShipsSystem>();
 
-  // SceneLevelSystem
-  manager.registerSystem<space_shooter::ecs::SceneLevelSystem>();
+  // CleanMissilesSystem
+  manager.registerSystem<space_shooter::ecs::CleanMissilesSystem>();
+
+  // PlayerDeathSystem
+  manager.registerSystem<space_shooter::ecs::PlayerDeathSystem>();
 
   // HealthBarDisplaySystem
   manager.registerSystem<space_shooter::ecs::HealthBarDisplaySystem>();

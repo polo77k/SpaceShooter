@@ -29,14 +29,14 @@ void MusicSystem::update(const sf::Time &delta_time,
     {
         if(music.sound.openFromFile(music.audio_path.string()))
         {
-            music.sound.setLoop(true);
+            music.sound.setLoop(true); // Permet de faire tourner la musique en boucle
             music.sound.play();
         }
         else
         {
-            std::cerr << "Probleme music : " << music.audio_path.string() << std::endl;
+            std::cerr << "Probleme musique : " << music.audio_path.string() << std::endl;
         }
-        music.jouer = true;
+        music.jouer = true; //Permet de lancer la musique une seule fois
     }
   }
 }
