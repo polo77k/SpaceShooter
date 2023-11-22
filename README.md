@@ -14,10 +14,10 @@ Ce jeu comporte de nombreuses fonctionnalités. Vous pourrez trouver différente
 
 Les autres systèmes présents sont :
 
-RenderingSystem : Un système de rendu des textures et des sprites pour les afficher à l'écran, comme le background et les vaisseaux.\n
-Background Image : Défini l'ambiance du jeu en affichant une image d'arrière-plan.\n
-InputSystem : Permet d'avoir des touches pour jouer.
-MovementSystem : Permet de déplacer les entités, notamment notre vaisseau et ceux des ennemis, ainsi que les missiles.
+RenderingSystem : Un système de rendu des textures et des sprites pour les afficher à l'écran, comme le background et les vaisseaux.  
+Background Image : Défini l'ambiance du jeu en affichant une image d'arrière-plan.  
+InputSystem : Permet d'avoir des touches pour jouer.  
+MovementSystem : Permet de déplacer les entités, notamment notre vaisseau et ceux des ennemis, ainsi que les missiles.  
 SceneSystem : Un système de transition entre les différentes scènes de jeu, plusieurs sceneSystem ont été créé pour chaque scène.
 TagComponent : Classifie les entités à l'aide de Tag pour une meilleure gestion dans divers systèmes.
 ShootingSystem : Permet au joueur, ainsi qu'aux ennemis de tirer des missiles.
