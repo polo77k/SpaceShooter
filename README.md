@@ -1,4 +1,4 @@
-### SpaceShooter
+# SpaceShooter
 
 ## Introduction
 
