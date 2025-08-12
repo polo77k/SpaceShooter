@@ -13,7 +13,7 @@ using namespace std::literals::string_view_literals;
   inline constexpr unsigned int     SPS_VERSION_TWEAK  = @PROJECT_VERSION_TWEAK@;
   inline constexpr std::string_view SPS_VERSION        = "@PROJECT_VERSION@"sv;
   inline constexpr std::string_view SPS_AUTHORS        = "@PROJECT_AUTHORS@"sv;
-  inline constexpr std::string_view SPS_PATH_TO_ASSETS = "@PROJECT_ASSETS_PATH@"sv;
+  inline constexpr std::string_view SPS_PATH_TO_ASSETS = "assets"sv;
 // clang-format on
 
 } // namespace space_shooter

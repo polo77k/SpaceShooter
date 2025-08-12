@@ -122,6 +122,15 @@ target_include_directories(space-shooter PRIVATE "${PROJECT_SOURCE_DIR}/src/spac
 # SFML 2 (system)
 target_link_libraries(space-shooter PRIVATE sfml-system sfml-window sfml-network sfml-graphics sfml-audio)
 
+# Copy SFML DLLs into the binary folder (Windows)
+if(WIN32)
+    add_custom_command(TARGET space-shooter POST_BUILD
+        COMMAND ${CMAKE_COMMAND} -E copy_directory
+        "${PROJECT_SOURCE_DIR}/SFML-2.6.0/bin"  # Folder where SFML puts the DLLs
+        $<TARGET_FILE_DIR:space-shooter>  # Executable folder
+    )
+endif()
+
 # Adress + leak sanitizer !
 if (MSVC)
     add_compile_options(/W4 /WX /permissive-)
