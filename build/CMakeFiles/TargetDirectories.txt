@@ -1,5 +1,0 @@
-C:/Users/polo7/Documents/ESIEE/E4/Cours E4/Programation C++/Projet/squeleton/squeleton/build/CMakeFiles/space-shooter.dir
-C:/Users/polo7/Documents/ESIEE/E4/Cours E4/Programation C++/Projet/squeleton/squeleton/build/CMakeFiles/package.dir
-C:/Users/polo7/Documents/ESIEE/E4/Cours E4/Programation C++/Projet/squeleton/squeleton/build/CMakeFiles/INSTALL.dir
-C:/Users/polo7/Documents/ESIEE/E4/Cours E4/Programation C++/Projet/squeleton/squeleton/build/CMakeFiles/ALL_BUILD.dir
-C:/Users/polo7/Documents/ESIEE/E4/Cours E4/Programation C++/Projet/squeleton/squeleton/build/CMakeFiles/ZERO_CHECK.dir
