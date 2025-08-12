@@ -1,0 +1,18 @@
+# Build and compiler output
+/build/
+/Debug/
+/Release/
+
+# VS Code & Visual Studio files
+.vscode/
+.vs/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# CMake cache
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
