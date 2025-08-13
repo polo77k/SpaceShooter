@@ -8,6 +8,24 @@ Le joueur se retrouve dans l'espace avec son vaisseau spatial, et doit détruire
 
 Attention ! Le temps vous est compté pour réaliser cette tâche, le chrono tourne....
 
+### Prérequis
+
+* CMake >= 3.20
+* Visual Studio 2022 (ou GCC/MSYS2 si tu veux compiler avec MinGW)
+* Windows
+* SFML 2.6 est inclus dans le projet (SFML-2.6.0)
+
+### Compilation
+
+* Ouvrir PowerShell ou terminal dans le dossier squeleton.
+* Créer le dossier de build et générer les fichiers de compilation :
+  * mkdir build
+  * cd build
+  * cmake .. -DCMAKE_BUILD_TYPE=Debug
+  * cmake --build . --target space-shooter
+* Depuis le dossier squeleton (pas depuis build !):
+  * .\build\Debug\space-shooter.exe
+
 ### Fonctionnalités implémentées
 
 Ce jeu comporte de nombreuses fonctionnalités. Vous pourrez trouver différentes scènes pour parcourir le jeu, comme une scène Menu, Rules, Level, GameOver et Victory.
