@@ -17,13 +17,13 @@ Attention ! Le temps vous est compté pour réaliser cette tâche, le chrono tou
 
 ### Compilation
 
-* Ouvrir PowerShell ou terminal dans le dossier squeleton.
+* Ouvrir PowerShell ou terminal dans le dossier du projet.
 * Créer le dossier de build et générer les fichiers de compilation :
   * mkdir build
   * cd build
   * cmake .. -DCMAKE_BUILD_TYPE=Debug
   * cmake --build . --target space-shooter
-* Depuis le dossier squeleton (pas depuis build !):
+* Depuis le dossier du projet (pas depuis build !):
   * .\build\Debug\space-shooter.exe
 
 ### Fonctionnalités implémentées
