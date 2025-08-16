@@ -23,8 +23,12 @@ Attention ! Le temps vous est compté pour réaliser cette tâche, le chrono tou
   * cd build
   * cmake .. -DCMAKE_BUILD_TYPE=Debug
   * cmake --build . --target space-shooter
-* Depuis le dossier du projet (pas depuis build !):
-  * .\build\Debug\space-shooter.exe
+* Déplacez-vous dans le dossier Debug :
+  * cd Debug
+  * .\space-shooter.exe
+
+Vous pouvez maintenant lancer le jeu !  
+Si vous souhaitez relancer le jeu après l'avoir fermé, faites seulement .\space-shooter.exe, les autres commandes ne servent plus. Si cela ne marche pas, supprimez le dossier build et recommencez les commandes depuis le début.
 
 ### Fonctionnalités implémentées
 
