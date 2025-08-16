@@ -27,7 +27,8 @@ Attention ! Le temps vous est compté pour réaliser cette tâche, le chrono tou
   * cd Debug
   * .\space-shooter.exe
 
-Vous pouvez maintenant lancer le jeu !  
+Vous pouvez maintenant lancer le jeu !
+
 Si vous souhaitez relancer le jeu après l'avoir fermé, faites seulement .\space-shooter.exe, les autres commandes ne servent plus. Si cela ne marche pas, supprimez le dossier build et recommencez les commandes depuis le début.
 
 ### Fonctionnalités implémentées
