@@ -10,9 +10,10 @@ Attention ! Le temps vous est compté pour réaliser cette tâche, le chrono tou
 
 ### Prérequis
 
+Ce projet s'execute sur Windows !
+
 * CMake >= 3.20
-* Visual Studio 2022 (ou GCC/MSYS2 si tu veux compiler avec MinGW)
-* Windows
+* Visual Studio 2022 (ou GCC/MSYS2 pour compiler avec MinGW)
 * SFML 2.6 est inclus dans le projet (SFML-2.6.0)
 
 ### Compilation

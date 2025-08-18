@@ -46,9 +46,9 @@ void CollisionSystem::update(const sf::Time &delta_time,
             const auto &sprite2 = e2->get<SpriteComponent>();
 
             // Tag PlayerMissile || EnemyMissile
-            if(tag1.tag == "PlayerShip" && tag2.tag == "EnemyMissile"
-            || tag1.tag == "EnemyShip" && tag2.tag == "PlayerMissile"
-            || tag1.tag == "EnemySpawner" && tag2.tag == "PlayerMissile")
+            if((tag1.tag == "PlayerShip" && tag2.tag == "EnemyMissile")
+            || (tag1.tag == "EnemyShip" && tag2.tag == "PlayerMissile")
+            || (tag1.tag == "EnemySpawner" && tag2.tag == "PlayerMissile"))
             {   
                 // Collision AABB
                 if(pos1.x < pos2.x + sprite2.width*sprite2.size && pos1.x + sprite1.width*sprite1.size > pos2.x &&
