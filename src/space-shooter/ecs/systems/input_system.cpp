@@ -60,7 +60,6 @@ void InputSystem::update(const sf::Time &delta_time,
     // Specific logic for escape
     bool escape_now = sf::Keyboard::isKeyPressed(sf::Keyboard::Escape);
     if (input.prev_escape && !escape_now) {
-      // touche relâchée, action déclenchée
       input.escape = true;
     } else {
       input.escape = false;
