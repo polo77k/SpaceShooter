@@ -28,26 +28,31 @@ void InputSystem::update(const sf::Time &delta_time,
     input.shooting = false; input.enter = false; input.escape = false;
     
     // TODO: detect keypressed with SFML and set the boolean state accordingly
-    if(sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
+    // Direction
+    if(sf::Keyboard::isKeyPressed(sf::Keyboard::Left) || sf::Keyboard::isKeyPressed(sf::Keyboard::Q))
     {
       input.move_left = true;
     }
-    if(sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
+    if(sf::Keyboard::isKeyPressed(sf::Keyboard::Right) || sf::Keyboard::isKeyPressed(sf::Keyboard::D))
     {
       input.move_right = true;
     }
-    if(sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
+    if(sf::Keyboard::isKeyPressed(sf::Keyboard::Up) || sf::Keyboard::isKeyPressed(sf::Keyboard::Z))
     {
       input.move_top = true;
     }
-    if(sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
+    if(sf::Keyboard::isKeyPressed(sf::Keyboard::Down) || sf::Keyboard::isKeyPressed(sf::Keyboard::S))
     {
       input.move_bottom = true;
     }
-    if(sf::Keyboard::isKeyPressed(sf::Keyboard::Space))
+
+    // Shoot
+    if(sf::Keyboard::isKeyPressed(sf::Keyboard::LShift) || sf::Keyboard::isKeyPressed(sf::Keyboard::RShift) || sf::Mouse::isButtonPressed(sf::Mouse::Left))
     {
       input.shooting = true;
     }
+
+    // Game and Rules
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::Enter))
     {
       input.enter = true;
@@ -57,7 +62,7 @@ void InputSystem::update(const sf::Time &delta_time,
       input.rules = true;
     }
 
-    // Specific logic for escape
+    // Specific logic for Escape
     bool escape_now = sf::Keyboard::isKeyPressed(sf::Keyboard::Escape);
     if (input.prev_escape && !escape_now) {
       input.escape = true;

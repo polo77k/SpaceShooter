@@ -22,9 +22,9 @@ namespace space_shooter
                         "Attention a votre barre de vie situee en haut\n"
                         "de l'ecran ! Ainsi qu'au chrono !!\n\n"
                         "Touches :\n"
-                        "Fleches directionnelles pour se deplacer\n"
-                        "dans toutes les directions.\n"
-                        "Espace pour tirer.\n\n\n"
+                        "- Fleches directionnelles ou ZQSD pour se\n"
+                        "  deplacer dans toutes les directions.\n"
+                        "- Shift ou Clique Gauche pour tirer.\n\n\n"
                         "Echap pour retourner au Menu.";
     manager.registerEntity<space_shooter::ecs::SceneRules>(texte, font_path);
 
