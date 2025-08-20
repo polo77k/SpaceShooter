@@ -72,7 +72,7 @@ void initLevel(ecs::Manager &manager) {
   manager.registerSystem<space_shooter::ecs::HealthBarDisplaySystem>();
 
   // Timer
-  sf::Time initialTime = sf::seconds(90.0f);
+  sf::Time initialTime = sf::seconds(120.0f); // 2 minutes
   auto font_path = manager.gameState().config.path_to_fonts / "Roboto-BoldCondensed.ttf";
   manager.registerEntity<space_shooter::ecs::LevelTimerEntity>(initialTime, font_path);
 
