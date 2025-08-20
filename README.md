@@ -1,16 +1,16 @@
 # SpaceShooter
 
-### Introduction
+Ce jeu est un space shooter, réalisé en quatrième année à ESIEE Paris, par Paul Kehlhoffner et Aymeric Martin.
 
-Ce jeu est un space shooter, réaliser par Paul Kehlhoffner et Aymeric Martin.
-
-Le joueur se retrouve dans l'espace avec son vaisseau spatial, et doit détruire le vaisseau mère sur sa route. Malheureusement, ce vaisseau mère appelle des vaisseaux ennemis pour se protéger, et vous attaquer en même temps. Votre but est donc de détruire tous les vaisseaux ennemis pour pouvoir gagner la partie.
+Le joueur se retrouve dans l'espace avec son vaisseau spatial, et doit détruire un vaisseau mère sur sa route. Malheureusement, ce vaisseau mère appelle des vaisseaux ennemis pour se protéger, et vous attaquer en même temps. Votre but est donc de détruire tous les vaisseaux ennemis pour pouvoir gagner la partie.
 
 Attention ! Le temps vous est compté pour réaliser cette tâche, le chrono tourne....
 
-### Prérequis
+# Mise en place du Jeu
 
-Ce projet s'execute sur Windows !
+## Prérequis
+
+__Ce projet s'execute sur Windows !__
 
 * CMake >= 3.20
 * Visual Studio 2022 (ou GCC/MSYS2 pour compiler avec MinGW)
