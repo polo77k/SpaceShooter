@@ -13,6 +13,7 @@ struct InputComponent : Component {
   bool move_bottom = false;
   bool shooting = false;
   bool escape = false;
+  bool prev_escape = false; // Special key
   bool enter = false;
   bool rules = false;
 

@@ -25,7 +25,7 @@ void InputSystem::update(const sf::Time &delta_time,
 
     // TODO : reset detected input from keyboard (put all value of component to false)
     input.move_left = false; input.move_right = false; input.move_top = false; input.move_bottom = false;
-    input.shooting = false; input.escape = false; input.enter = false;
+    input.shooting = false; input.enter = false; input.escape = false;
     
     // TODO: detect keypressed with SFML and set the boolean state accordingly
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
@@ -48,10 +48,6 @@ void InputSystem::update(const sf::Time &delta_time,
     {
       input.shooting = true;
     }
-    if(sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
-    {
-      input.escape = true;
-    }
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::Enter))
     {
       input.enter = true;
@@ -60,6 +56,16 @@ void InputSystem::update(const sf::Time &delta_time,
     {
       input.rules = true;
     }
+
+    // Specific logic for escape
+    bool escape_now = sf::Keyboard::isKeyPressed(sf::Keyboard::Escape);
+    if (input.prev_escape && !escape_now) {
+      // touche relâchée, action déclenchée
+      input.escape = true;
+    } else {
+      input.escape = false;
+    }
+    input.prev_escape = escape_now;
   }
 }
 
