@@ -30,7 +30,7 @@ __Ce projet s'execute sur Windows !__
 
 Vous pouvez maintenant lancer le jeu !
 
-Si vous souhaitez relancer le jeu après l'avoir fermé, faites seulement .\space-shooter.exe, les autres commandes ne servent plus. Si cela ne marche pas, supprimez le dossier build et recommencez les commandes depuis le début.
+Si vous souhaitez relancer le jeu après l'avoir fermé, faites seulement ```.\space-shooter.exe```, les autres commandes ne servent plus. Si cela ne marche pas, supprimez le dossier build et recommencez les commandes depuis le début.
 
 ### Fonctionnalités implémentées
 
