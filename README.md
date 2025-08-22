@@ -32,13 +32,17 @@ __Ce projet s'execute sur Windows !__
 
 * Ouvrir PowerShell ou terminal dans le dossier du projet.
 * Créer le dossier de build et générer les fichiers de compilation :
-  * mkdir build
-  * cd build
-  * cmake .. -DCMAKE_BUILD_TYPE=Debug
-  * cmake --build . --target space-shooter
+```
+mkdir build
+cd build
+cmake .. -DCMAKE_BUILD_TYPE=Debug
+cmake --build . --target space-shooter
+```
 * Déplacez-vous dans le dossier Debug :
-  * cd Debug
-  * .\space-shooter.exe
+```
+cd Debug
+.\space-shooter.exe
+```
 
 Vous pouvez maintenant lancer le jeu !
 
