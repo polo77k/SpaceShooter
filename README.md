@@ -6,6 +6,18 @@ Le joueur se retrouve dans l'espace avec son vaisseau spatial, et doit détruire
 
 Attention ! Le temps vous est compté pour réaliser cette tâche, le chrono tourne....
 
+## Principe de conception
+
+Ce projet est conçu autour du Entity Component System (ECS), un modèle de programmation très utilisé dans le développement de jeux vidéo.
+
+### Qu'est-ce que l'ECS ?
+
+* Entity (Entité) : un objet du jeu, comme le vaisseau du joueur, un missile ou un ennemi.
+* Component (Composant) : une donnée pure qui décrit un aspect de l'entité, par exemple sa position, sa vitesse, ou son sprite.
+* System (Système) : la logique qui agit sur les entités possédant certains composants. Par exemple, le MovementSystem déplace toutes les entités qui ont à la fois une position et une vitesse.
+
+Cette architecture permet de séparer les données et la logique, rendant le code plus modulaire et facile à étendre. Chaque nouveau type d’entité ou de comportement peut être ajouté sans toucher au reste du code.
+
 # Mise en place du Jeu
 
 ## Prérequis
