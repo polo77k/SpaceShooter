@@ -53,6 +53,30 @@ Si vous souhaitez relancer le jeu après l'avoir fermé, faites seulement :
 
 Les autres commandes ne sont plus nécessaires. Si cela ne fonctionne pas, supprimez le dossier ```build``` et recommencez les étapes depuis le début.
 
+## Contrôles et Gameplay
+
+Le jeu propose deux configurations principales pour s’adapter aux joueurs.
+
+#### Déplacements
+
+Vous pouvez déplacer votre vaisseau dans toutes les directions :
+* Flèches directionnelles : haut, bas, gauche, droite
+* ZQSD : haut (Z), gauche (Q), bas (S), droite (D)
+
+Vous pouvez combiner les touches pour vous déplacer en diagonale.
+
+#### Tir
+
+Pour tirer des projectiles :
+* Maj (Shift gauche)
+* Ou Clic gauche de la souris (assurez-vous que la fenêtre du jeu est active)
+
+#### Objectif du jeu
+
+* Détruire tous les vaisseaux ennemis et le vaisseau mère pour gagner.
+* Surveillez votre barre de vie, affichée en haut de l’écran.
+* Attention au chrono, le temps est limité pour finir le niveau.
+
 ### Fonctionnalités implémentées
 
 Ce jeu comporte de nombreuses fonctionnalités. Vous pourrez trouver différentes scènes pour parcourir le jeu, comme une scène Menu, Rules, Level, GameOver et Victory.
@@ -90,7 +114,3 @@ Toutes les fonctionnalités proposées pour notre projet ont été réalisé, sa
 
 Il arrive que le vaisseau mère se bloque sur un des côtés pour une raison inconnue.  
 Nous avons eu également des bugs de son, quand il y avait trop de missiles créés. L'ajout de la fonctionnalité Clean Sounds à permit de résoudre le problème.
-
-### Commandes
-
-Pour jouer au jeu, vous pouvez vous déplacer à l'aide des touches directionnelles du clavier, et la touche Espace permet de tirer les missiles.
