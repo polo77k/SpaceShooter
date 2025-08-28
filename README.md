@@ -79,38 +79,33 @@ Pour tirer des projectiles :
 
 ### Fonctionnalités implémentées
 
-Ce jeu comporte de nombreuses fonctionnalités. Vous pourrez trouver différentes scènes pour parcourir le jeu, comme une scène Menu, Rules, Level, GameOver et Victory.
+Le jeu utilise le principe de Entity Component System (ECS) et comporte plusieurs scènes : Menu, Rules, Level, GameOver et Victory.
 
-Les autres systèmes présents sont :
+Les principaux systèmes et composants sont :
 
-__RenderingSystem__ : Un système de rendu des textures et des sprites pour les afficher à l'écran, comme le background et les vaisseaux.  
-__Background Image__ : Défini l'ambiance du jeu en affichant une image d'arrière-plan.  
-__InputSystem__ : Permet d'avoir des touches pour jouer.  
-__MovementSystem__ : Permet de déplacer les entités, notamment notre vaisseau et ceux des ennemis, ainsi que les missiles.  
-__SceneSystem__ : Un système de transition entre les différentes scènes de jeu, plusieurs sceneSystem ont été créé pour chaque scène.  
-__TagComponent__ : Classifie les entités à l'aide de Tag pour une meilleure gestion dans divers systèmes.  
-__ShootingSystem + EnemyShootingSystem__ : Permet au joueur, ainsi qu'aux ennemis de tirer des missiles.  
-__Cooldown Missile__ : Permet d'avoir un delay entre les missiles, grâce à un ClockSystem.  
-__Enemy Spawner__ : Un vaisseau mère, qui produit des vaisseaux ennemis à intervalle régulier, tant qu'il est en vie.  
-__CollisionSystem + Health/Damage__ : Mécanisme dans lequel les missiles et les vaisseaux entrent en collision (format AABB), causant des dégâts.  
-__Clean Killed Ship__ : Système qui détecte les vaisseaux sans vie, et les détruits.  
-__Clean Missile__ : Système qui détruit les missiles une fois les bordures de l'écran franchi.  
-__EnemyChasingSystem__ : Les navires ennemis suivent uniquement le joueur sur l'axe des x, pour une difficulté raisonnable.  
-__EnemySpawnerSystem__ : Le vaisseau mère ennemi bouge sur l'axe des x, pour ajouter de la difficulté au joueur.  
-__Player Death Detection__ : Un système qui passe à la scène de GameOver quand le joueur est mort.  
-__VictorySystem__ : Permet de gagner la partie, si tous les ennemis et le vaisseau mère sont détruits.  
-__Health Bar__ : Ajout d'un bar de vie du joueur à l'écran, pour connaitre l'étendue des dégâts du vaisseau.  
-__Timer__ : Ajout un timer, qui oblige le joueur à gagner la partie avant la fin du temps.  
-__Text Rendering System__ : Système permettant d'afficher un texte à l'écran, comme le timer, ou les règles dans la scène Rules.  
-__Text Blink System__ : Système permettant de faire clignoter un texte.  
-__Scoring Mechanism__ : Mécanisme permettant d'avoir un score en tuant les ennemis.  
-__Music System__ : Ajout de musique pour les backgrounds.  
-__Audio System__ : Ajout de différents bruits, par exemple pour les missiles et les vaisseaux détruits.  
-__Clean Sounds__ : Permet de détruire les sons une fois qu'ils ont été joué.  
-
-Toutes les fonctionnalités proposées pour notre projet ont été réalisé, sauf celle pour mettre le jeu en pause.
+* __RenderingSystem__ : Affiche les textures et sprites à l'écran (background, vaisseaux, projectiles).
+* __Background Image__ : Défini l'ambiance du jeu avec une image d'arrière-plan.
+* __InputSystem__ : Détecte les touches du joueur.
+* __MovementSystem__ : Déplace les entités (joueur, ennemis, missiles).
+* __SceneSystem__ : Gère la transition entre les différentes scènes.
+* __TagComponent__ : Classe les entités avec des Tag pour une gestion plus simple dans les systèmes.
+* __ShootingSystem + EnemyShootingSystem__ : Permet au joueur et aux ennemis de tirer des missiles.
+* __Cooldown Missile (ClockSystem)__ : Gestion du délai entre les tirs de missiles.
+* __EnemySpawner + EnemySpawnerSystem__ : Le vaisseau mère produit des ennemis et se déplace pour augmenter la difficulté.
+* __CollisionSystem + Health/Damage__ : Gère les collisions AABB entre missiles et vaisseaux et applique les dégâts.
+* __Clean Killed Ship__ : Supprime les vaisseaux sans vie, et les détruits.
+* __Clean Missile__ : Supprime les missiles qui passent en dehors de l'écran.
+* __EnemyChasingSystem__ : Les ennemis suivent le joueur sur l’axe X.
+* __Player Death Detection__ : Passe à la scène GameOver quand le joueur meurt.
+* __VictorySystem__ : Déclenche la victoire lorsque tous les ennemis et le vaisseau mère sont détruits.
+* __Health Bar__ : Affiche la barre de vie du joueur.
+* __Timer__ : Limite le temps pour terminer le niveau.
+* __Text Rendering System + Text Blink System__ : Affiche du texte et permet de le faire clignoter (timer, règles).
+* __Scoring Mechanism__ : Compte les points en tuant les ennemis.
+* __Music System__ : Ajoute de la musique pour de fond.
+* __Audio System__ : Ajoute des effets sonores (missiles, vaisseaux détruits).
+__Clean Sounds__ : Supprime les sons terminés pour éviter les conflits.
 
 ### Bugs et Problèmes
 
-Il arrive que le vaisseau mère se bloque sur un des côtés pour une raison inconnue.  
-Nous avons eu également des bugs de son, quand il y avait trop de missiles créés. L'ajout de la fonctionnalité Clean Sounds à permit de résoudre le problème.
+* Il arrive que le vaisseau mère se bloque sur un des côtés pour une raison inconnue.  
