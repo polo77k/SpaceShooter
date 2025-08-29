@@ -104,8 +104,14 @@ Les principaux systèmes et composants sont :
 * __Scoring Mechanism__ : Compte les points en tuant les ennemis.
 * __Music System__ : Ajoute de la musique pour de fond.
 * __Audio System__ : Ajoute des effets sonores (missiles, vaisseaux détruits).
-__Clean Sounds__ : Supprime les sons terminés pour éviter les conflits.
+* __Clean Sounds__ : Supprime les sons terminés pour éviter les conflits.
 
 ### Bugs et Problèmes
 
-* Il arrive que le vaisseau mère se bloque sur un des côtés pour une raison inconnue.  
+* Il arrive que le vaisseau mère se bloque sur un des côtés pour une raison inconnue.
+
+# Conclusion
+
+SpaceShooter est un projet complet démontrant la puissance du Entity Component System pour structurer un jeu. Il combine des mécaniques de gameplay classiques (tir, ennemis, collisions, score) avec une interface simple et interactive.
+
+Nous espérons que ce jeu vous offrira une expérience amusante et qu’il pourra servir d’exemple pour comprendre la conception d’un jeu ECS en C++.
