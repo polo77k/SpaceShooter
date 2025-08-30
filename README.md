@@ -115,3 +115,7 @@ Les principaux systèmes et composants sont :
 SpaceShooter est un projet complet démontrant la puissance du Entity Component System pour structurer un jeu. Il combine des mécaniques de gameplay classiques (tir, ennemis, collisions, score) avec une interface simple et interactive.
 
 Nous espérons que ce jeu vous offrira une expérience amusante et qu’il pourra servir d’exemple pour comprendre la conception d’un jeu ECS en C++.
+
+# Auteur
+
+Paul Kehlhoffner
